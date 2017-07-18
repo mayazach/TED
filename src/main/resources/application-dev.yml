@@ -1,0 +1,12 @@
+spring:
+    profiles: dev
+    datasource:
+        url: jdbc:mysql://localhost:3306/rooms
+        username: root
+        password: letmein
+        driver-class-name: com.mysql.jdbc.Driver 
+
+    jpa:
+        show-sql: false
+        properties:
+            hibernate.format_sql: true

@@ -1,0 +1,29 @@
+spring:
+    application:
+        name: roomsApp
+    profiles:
+        active: dev
+
+    jpa:
+        database: mysql
+        properties:
+            javax.persistance.sharedCache.mode: ALL
+            hibernate.dialect: org.hibernate.dialect.MySQLDialect
+            hibernate.use_second_level_cache: true
+            hibernate.user_query_cache: true
+        database-platform: MYSQL
+        hibernate:
+            ddl-auto: update
+    resources:
+        chain:
+            strategy:
+                content:
+                    enabled: true
+                fixed:
+                    paths:
+server:
+    context-path: /rooms
+    servlet-path: /services
+logging:
+    level:
+        ROOT: info
