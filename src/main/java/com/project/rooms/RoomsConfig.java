@@ -37,7 +37,7 @@ public class RoomsConfig {
                                                                        @Qualifier("dataSource") DataSource dataSource) {
         return builder
                 .dataSource(dataSource)
-                .packages("com.project.entities")
+                .packages("com.project.rooms.entities")
                 .persistenceUnit("demo")
                 .build();
     }

@@ -24,6 +24,7 @@ spring:
 server:
     context-path: /rooms
     servlet-path: /services
+
 logging:
     level:
         ROOT: info

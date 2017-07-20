@@ -84,4 +84,7 @@ CREATE TABLE review (
   ON DELETE CASCADE
 );
 
+INSERT INTO roomsuser (id,name,role) VALUES (1,'User1','user');
+INSERT INTO roomsuser (id,name,role) VALUES (2,'User2','admin');
+
 COMMIT;
