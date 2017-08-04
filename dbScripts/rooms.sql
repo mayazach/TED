@@ -120,6 +120,11 @@ CREATE TABLE review (
 INSERT INTO roomsuser (id,name,role) VALUES (1,'User1','user');
 INSERT INTO roomsuser (id,name,role) VALUES (2,'User2','admin');
 INSERT INTO roomsuser (id,name,role) VALUES (3,'Owner','owner');
+INSERT INTO roomsuser (id,name,role) VALUES (4,'Owner2','owner2');
+INSERT INTO roomsuser (id,name,role) VALUES (5,'Owner3','owner3');
+
+INSERT INTO roomsowner (id,userid,realname,url,description,location) VALUES (1,3,'John Doe','www.something.com/001','Rents apartments','Athens,Greece');
+INSERT INTO roomsowner (id,userid,realname,url,description,location) VALUES (2,4,'Jane Doe','www.something.com/002','Traditional homes','Crete,Greece');
 
 INSERT INTO country (id,code,name) VALUES (1,'FR','France''GR');
 INSERT INTO country (id,code,name) VALUES (2,'GR','Greece');

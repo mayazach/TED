@@ -1,4 +1,4 @@
-package com.project.rooms;
+package com.project.rooms.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
