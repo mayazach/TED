@@ -27,3 +27,14 @@ body {
     left:70%;
     right: 20%;
 }
+
+.continue {
+   margin:50;
+   position:relative;
+   text-align:center;
+   left:50%;
+   top:90%; 
+   color:blue;
+   width:15%;
+
+}
