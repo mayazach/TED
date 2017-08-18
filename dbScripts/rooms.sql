@@ -108,7 +108,7 @@ CREATE TABLE review (
   id INT NOT NULL AUTO_INCREMENT,
   roomid INT NOT NULL ,
   text TEXT(1500),
-  score INT(1),
+  score INT(3),
   PRIMARY KEY (id)
   ,
   CONSTRAINT reviewid_roomid_FK
@@ -130,5 +130,14 @@ INSERT INTO country (id,code,name) VALUES (1,'FR','France''GR');
 INSERT INTO country (id,code,name) VALUES (2,'GR','Greece');
 INSERT INTO country (id,code,name) VALUES (3,'IT','Italy');
 INSERT INTO country (id,code,name) VALUES (4,'ES','Spain');
+
+INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePerExtra,pricePerWeek,pricePerMonth,squareMetres,roomType,
+	beds,bedrooms,bathrooms,thumbnail,defaultPic,floor,neighborhoodOverview,address,postalCode,city,state,country,transport,amenities,
+	rules,reviews,reviewAvg)
+	VALUES (1,1,'A 2-bdrm house in Plaka of Athens','https://www.airbnb.com/rooms/5731498','Ideally located a unique house in a very peaceful neighborhood of Plaka',
+	4,6,120,15,250,560,null,'Apartment',3,2,1,'https://a2.muscache.com/ac/pictures/71819787/97d77d9e_original.jpg?interpolation=lanczos-none&size=small&output-format=jpg&output-quality=70',
+	'https://a2.muscache.com/ac/pictures/71819787/97d77d9e_original.jpg?interpolation=lanczos-none&size=medium&output-format=jpg&output-quality=70',
+	'1st',null,'Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
+	null,16,94);
 
 COMMIT;

@@ -6,10 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.project.rooms.dao.CountryDAO;
-import com.project.rooms.entities.Country;
-import com.project.rooms.dao.OwnerDAO;
-import com.project.rooms.entities.Owner;
+import com.project.rooms.dao.*;
+import com.project.rooms.entities.*;
 
 @RestController
 public class DataController {
@@ -17,6 +15,8 @@ public class DataController {
 	private CountryDAO countryDAO;
 	@Autowired
 	private OwnerDAO ownerDAO;
+	@Autowired
+	private RoomDAO roomDAO;
 	
 	@GetMapping("/countries")
 	public List<Country> getCountries(){
@@ -32,5 +32,13 @@ public class DataController {
 		for(Owner owner: ownerDAO.findAll())
 			owners.add(owner);
 		return owners;
+	}
+	
+	@GetMapping("/rooms")
+	public List<Room> getRooms(){
+		List<Room> rooms = new ArrayList<>();
+		for(Room room: roomDAO.findAll())
+			rooms.add(room);
+		return rooms;
 	}
 }
