@@ -21,6 +21,10 @@ spring:
                     enabled: true
                 fixed:
                     paths:
+    mvc:
+        view:
+            prefix: /WEB-INF/
+            suffix: .jsp
 server:
     context-path: /rooms
     servlet-path: /services
