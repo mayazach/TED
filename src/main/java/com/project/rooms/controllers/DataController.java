@@ -17,6 +17,12 @@ public class DataController {
 	private OwnerDAO ownerDAO;
 	@Autowired
 	private RoomDAO roomDAO;
+	@Autowired
+	private PhotoDAO photoDAO;
+	@Autowired
+	private RentdateDAO rentdateDAO;
+	@Autowired
+	private ReviewDAO reviewDAO;
 	
 	@GetMapping("/countries")
 	public List<Country> getCountries(){
@@ -40,5 +46,29 @@ public class DataController {
 		for(Room room: roomDAO.findAll())
 			rooms.add(room);
 		return rooms;
+	}
+	
+	@GetMapping("/photos")
+	public List<Photo> getPhotos(){
+		List<Photo> photos = new ArrayList<>();
+		for(Photo photo: photoDAO.findAll())
+			photos.add(photo);
+		return photos;
+	}
+	
+	@GetMapping("/rentdates")
+	public List<Rentdate> getDates(){
+		List<Rentdate> rentdates= new ArrayList<>();
+		for(Rentdate rentdate: rentdateDAO.findAll())
+			rentdates.add(rentdate);
+		return rentdates;
+	}
+	
+	@GetMapping("/reviews")
+	public List<Review> getReviews(){
+		List<Review> reviews = new ArrayList<>();
+		for(Review review: reviewDAO.findAll())
+			reviews.add(review);
+		return reviews;
 	}
 }

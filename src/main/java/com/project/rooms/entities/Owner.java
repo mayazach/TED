@@ -20,9 +20,6 @@ public class Owner {
 	@JoinColumn(name="userid",nullable=false)
 	private User user;
 	
-	@Column(name="realname")
-	private String name;
-	
 	@Column(name="url")
 	private String url;
 	
@@ -34,10 +31,9 @@ public class Owner {
 
 	protected Owner(){}
 
-	public Owner(User user, String name, String url, String description, String location) {
+	public Owner(User user, String url, String description, String location) {
 		super();
 		this.user = user;
-		this.name = name;
 		this.url = url;
 		this.description = description;
 		this.location = location;
@@ -57,14 +53,6 @@ public class Owner {
 
 	public void setUser(User user) {
 		this.user = user;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getUrl() {
@@ -98,7 +86,6 @@ public class Owner {
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((location == null) ? 0 : location.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((url == null) ? 0 : url.hashCode());
 		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		return result;
@@ -128,11 +115,6 @@ public class Owner {
 				return false;
 		} else if (!location.equals(other.location))
 			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
 		if (url == null) {
 			if (other.url != null)
 				return false;
@@ -148,7 +130,7 @@ public class Owner {
 
 	@Override
 	public String toString() {
-		return "Owner [id=" + id + ", user=" + user + ", name=" + name + ", url=" + url + ", description=" + description
+		return "Owner [id=" + id + ", user=" + user + ", url=" + url + ", description=" + description
 				+ ", location=" + location + "]";
 	}
 	

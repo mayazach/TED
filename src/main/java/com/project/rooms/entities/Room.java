@@ -109,13 +109,11 @@ public class Room {
 	
 	protected Room(){}
 
-	protected Room(Long id, Owner owner, String name, String url, String description, int guests, Integer maxGuests,
+	public Room(Owner owner, String name, String url, String description, int guests, Integer maxGuests,
 			Double price, Double pricePerExtra, Double pricePerWeek, Double pricePerMonth, Integer squareMetres,
 			String roomType, Integer beds, Integer bedrooms, Integer bathrooms, String thumbnail, String defaultPic,
 			String floor, String neighborhood, String address, String postalCode, String city, String state,
 			Country country, String transport, String amenities, String rules) {
-		super();
-		this.id = id;
 		this.owner = owner;
 		this.name = name;
 		this.url = url;

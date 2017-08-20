@@ -15,16 +15,33 @@ public class User {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 	
-	@Column(name="name")
-	private String name;
+	@Column(name="firstName")
+	private String firstName;
+	
+	@Column(name="lastName")
+	private String lastName;
+	
+	@Column(name="email")
+	private String email;
+	
+	@Column(name="phone")
+	private String phone;
+	
+	@Column(name="photoUrl")
+	private String photoUrl;
 	
 	@Column(name="role")
 	private String role;
 
 	protected User() {}
 
-	public User(String name, String role) {
-		this.name = name;
+	public User(String firstName, String lastName, String email, String phone, String photoUrl, String role) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.phone = phone;
+		this.photoUrl = photoUrl;
 		this.role = role;
 	}
 
@@ -36,12 +53,44 @@ public class User {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getPhotoUrl() {
+		return photoUrl;
+	}
+
+	public void setPhotoUrl(String photoUrl) {
+		this.photoUrl = photoUrl;
 	}
 
 	public String getRole() {
@@ -56,8 +105,12 @@ public class User {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
+		result = prime * result + ((phone == null) ? 0 : phone.hashCode());
+		result = prime * result + ((photoUrl == null) ? 0 : photoUrl.hashCode());
 		result = prime * result + ((role == null) ? 0 : role.hashCode());
 		return result;
 	}
@@ -71,15 +124,35 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		if (firstName == null) {
+			if (other.firstName != null)
+				return false;
+		} else if (!firstName.equals(other.firstName))
+			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (name == null) {
-			if (other.name != null)
+		if (lastName == null) {
+			if (other.lastName != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!lastName.equals(other.lastName))
+			return false;
+		if (phone == null) {
+			if (other.phone != null)
+				return false;
+		} else if (!phone.equals(other.phone))
+			return false;
+		if (photoUrl == null) {
+			if (other.photoUrl != null)
+				return false;
+		} else if (!photoUrl.equals(other.photoUrl))
 			return false;
 		if (role == null) {
 			if (other.role != null)
@@ -91,7 +164,8 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", role=" + role + "]";
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", phone=" + phone + ", photoUrl=" + photoUrl + ", role=" + role + "]";
 	}
 	
 	
