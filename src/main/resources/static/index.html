@@ -24,27 +24,27 @@
              </script>
     <h1 style=text-align:center>Welcome</h1>
     
-    <form id='user-opt' class=form1>
-    Location(Neighbourhood/City/Country):<br>
-    <input type="text" name="neigbourhood" value="">
-    <input type="text" name="city" value="">
-    <input type="text" name="country" value="">
-    
-    <br>
-    Time(Arrival/Departure):<br>
-    <!-- <input type="text" name="time" value=""> -->
-    <!-- <input type="text" name="time" value=""> -->
-    <input type="date" name="time-arrival">
-    <input type="date" name="time-departure">
-    
-    <!-- <script>alert("hello!");</script> -->
-    
-    <br>
-    Number of people:<br>
-    <input type="number" name="location">
-    <br><br>
-    <input type="submit" value="Submit">
-</form>
+    <form id='user-opt' class=form1 action='/rooms/services/search' method='post'>
+	    Location(Neighbourhood/City/Country):<br>
+	    <input type="text" name="neigbourhood" value="">
+	    <input type="text" name="city" value="">
+	    <input type="text" name="country" value="">
+	    
+	    <br>
+	    Time(Arrival/Departure):<br>
+	    <!-- <input type="text" name="time" value=""> -->
+	    <!-- <input type="text" name="time" value=""> -->
+	    <input type="date" name="time-arrival">
+	    <input type="date" name="time-departure">
+	    
+	    <!-- <script>alert("hello!");</script> -->
+	    
+	    <br>
+	    Number of people:<br>
+	    <input type="number" name="location">
+	    <br><br>
+	    <input type="submit" value="Submit">
+	</form>
     <!-- <script>
     setTimeout(function() {
     window.location.href = "index2.html";
