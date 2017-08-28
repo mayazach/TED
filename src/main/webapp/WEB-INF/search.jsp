@@ -21,6 +21,7 @@ th, td {
 <title>Search results</title>
 </head>
 <body>
+<h1>We suggest the following options</h1>
  <table style="width:100%">
   <tr>
     <th>Photo</th>
@@ -28,7 +29,7 @@ th, td {
     <th>Type</th>
     <th>Number of beds</th>
     <th>Average rating</th>
-    <th>City</th><td>${city}</td>
+
    
    <!--/*Enumeration paramNames = request.getParameterNames();
    while(paramNames.hasMoreElements()) {*/
@@ -36,14 +37,15 @@ th, td {
            out.print("<tr><td>" + paramName + "</td>\n");-->
           <c:forEach var = "dwm" items = "${rooms}" >
              <tr>            
-          
-             <td> </td>
-             <td> </td>
-             <td> </td>
+                     
+             <td><a href="https://www.google.gr"><img src=<c:out value = "${dwm.defaultPic}"/>></a> </td>
+             <td><c:out value = "${dwm.price}"/> </td>
+             <td><c:out value = "${dwm.roomType}"/></td>
     
-             <td></td>
-             <td></td>
-             <td> </td>
+             <td><c:out value = "${dwm.beds}"/></td>
+             <td><c:out value = "${dwm.reviewAvg}"/></td>
+            
+          
              
              <!--<c:out value="myVariable"/>
              <h1>${myVariable}</h1>*/
