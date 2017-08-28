@@ -29,7 +29,7 @@ public class SearchController {
 		for(Room room: roomDAO.findRoomByCity(city))
 			rooms.add(room);
 		logger.info(city);
-		model.addAttribute("city",city);
+		model.addAttribute("rooms",rooms);
 		return "search";
 	}
 
