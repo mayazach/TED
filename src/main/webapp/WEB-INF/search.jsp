@@ -62,14 +62,16 @@ tr:hover{
          </table>
 <script type="text/javascript">
 var elements = document.getElementsByClassName('clickable');
+/*location.href="index3.html";*/
 for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
     element.addEventListener('click', function() {
         var href = this.dataset.href;
         if (href) {
             window.location.assign(href);
+    
         }
-    }
+    })
 }
 </script>
 </body>
