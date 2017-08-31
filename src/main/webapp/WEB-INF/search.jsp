@@ -17,13 +17,16 @@ th, td {
     padding: 5px;
     text-align: left;
 }
+tr:hover{
+   background-color: lightblue;
+}
 </style>
 <title>Search results</title>
 </head>
 <body>
 <h1>We suggest the following options</h1>
  <table style="width:100%">
-  <tr>
+  <tr style="color:brown">
     <th>Photo</th>
     <th>Cost</th>
     <th>Type</th>
@@ -35,9 +38,8 @@ th, td {
    while(paramNames.hasMoreElements()) {*/
            /*String paramName = (String)paramNames.nextElement();
            out.print("<tr><td>" + paramName + "</td>\n");-->
-          <c:forEach var = "dwm" items = "${rooms}" >
-             <tr>            
-                     
+          <c:forEach var = "dwm" items = "${rooms}" >          
+             <tr class="clickable" data-href="http://www.google.gr">    
              <td><a href="https://www.google.gr"><img src=<c:out value = "${dwm.defaultPic}"/>></a> </td>
              <td><c:out value = "${dwm.price}"/> </td>
              <td><c:out value = "${dwm.roomType}"/></td>
@@ -58,5 +60,17 @@ th, td {
           </tr>
           </c:forEach>
          </table>
+<script type="text/javascript">
+var elements = document.getElementsByClassName('clickable');
+for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    element.addEventListener('click', function() {
+        var href = this.dataset.href;
+        if (href) {
+            window.location.assign(href);
+        }
+    }
+}
+</script>
 </body>
 </html>
