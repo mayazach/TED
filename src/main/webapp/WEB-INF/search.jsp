@@ -32,14 +32,15 @@ tr:hover{
     <th>Type</th>
     <th>Number of beds</th>
     <th>Average rating</th>
+   </tr>
 
    
    <!--/*Enumeration paramNames = request.getParameterNames();
    while(paramNames.hasMoreElements()) {*/
            /*String paramName = (String)paramNames.nextElement();
            out.print("<tr><td>" + paramName + "</td>\n");-->
-          <c:forEach var = "dwm" items = "${rooms}">          
-             <tr class="clickable" data-href="http://www.google.gr">    
+          <c:forEach var = "dwm" items = "${rooms}" >          
+             <tr class="clickable" data-href=<c:out value = "${dwm.url}"/>>    
              <td><a href="https://www.google.gr"><img src=<c:out value = "${dwm.defaultPic}"/>></a> </td>
              <td><c:out value = "${dwm.price}"/> </td>
              <td><c:out value = "${dwm.roomType}"/></td>
