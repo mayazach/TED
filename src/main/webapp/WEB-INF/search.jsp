@@ -40,7 +40,8 @@ tr:hover{
            /*String paramName = (String)paramNames.nextElement();
            out.print("<tr><td>" + paramName + "</td>\n");-->
           <c:forEach var = "dwm" items = "${rooms}" >          
-             <tr class="clickable" data-href=<c:out value = "${dwm.url}"/>>    
+            <!--   <tr class="clickable" data-href=<c:out value = "${dwm.url}"/>>  -->
+             <tr class="clickable" data-href="showroom.jsp?bedsPar=${dwm.beds}&pricePar=${dwm.price}">
              <td><a href="https://www.google.gr"><img src=<c:out value = "${dwm.defaultPic}"/>></a> </td>
              <td><c:out value = "${dwm.price}"/> </td>
              <td><c:out value = "${dwm.roomType}"/></td>
