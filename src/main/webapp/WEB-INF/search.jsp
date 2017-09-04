@@ -49,38 +49,7 @@ tr:hover{
              <td><c:out value = "${dwm.beds}"/></td>
              <td><c:out value = "${dwm.reviewAvg}"/></td>
             
-            <!--   id INT NOT NULL AUTO_INCREMENT,
-  ownerid INT NOT NULL ,
-  name VARCHAR(128) NOT NULL,
-  url VARCHAR(1024) NOT NULL,
-  description VARCHAR(1024),
-  guests INT NOT NULL,
-  maxguests INT,
-  price DECIMAL(10,2),
-  pricePerExtra DECIMAL(10,2),
-  pricePerWeek DECIMAL(10,2),
-  pricePerMonth DECIMAL(10,2),
-  squareMetres INT,
-  roomType VARCHAR(128),
-  beds INT(2),
-  bedrooms INT(2),
-  bathrooms INT(2),
-  thumbnail VARCHAR(1024),
-  defaultPic VARCHAR(1024),
-  floor VARCHAR(128),
-  neighborhoodOverview VARCHAR(1024),
-  address VARCHAR(1024),
-  postalCode VARCHAR(128),
-  city VARCHAR(128),
-  state VARCHAR(128),
-  country INT,
-  transport VARCHAR(1024),
-  amenities VARCHAR(1024),
-  rules VARCHAR(1024),
-  reviews INT,
-  reviewAvg DECIMAL(10,2),
-  PRIMARY KEY (id)
-  -->           
+           
              <!--<c:out value="myVariable"/>
              <h1>${myVariable}</h1>*/
              out.print("</tr>");
