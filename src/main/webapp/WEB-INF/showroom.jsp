@@ -30,7 +30,7 @@ margin-right:10%;
 <body>
 <h1 style=margin-left:10%;margin-right:10%>Room info</h1><br>
 <div><b>Place:</b><br>
-<%
+<%/*
             String beds = request.getParameter("bedsPar");
             String squareMetres=request.getParameter("squareMetresPar");
             String price=request.getParameter("pricePar");
@@ -39,20 +39,20 @@ margin-right:10%;
             String address=request.getParameter("addressPar");
            /* String neighborhood=request.getParameter("neighborhoodPar");*/
 %>
-Number of beds : <%=beds %>
+Number of beds <c:out value = "${room.beds}"/>
 <br>
-SquareMetres:<%=squareMetres %>
+SquareMetres: 
 <br>
 
 <br>
 <b>Description:</b>
 <br>
-<%=description %>
+
 <br>
 <br>
 <b>Rules:</b>
 <br>
-<%=rules%>
+
 <br>
 <!--  Price:-->
 
@@ -61,7 +61,7 @@ SquareMetres:<%=squareMetres %>
 <br>
 Map:
 <br>
-Address:<%=address %>
+Address:
 <br>
 Neighborhood:
 <br>

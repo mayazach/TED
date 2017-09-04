@@ -41,7 +41,8 @@ tr:hover{
            out.print("<tr><td>" + paramName + "</td>\n");-->
           <c:forEach var = "dwm" items = "${rooms}" >          
             <!--   <tr class="clickable" data-href=<c:out value = "${dwm.url}"/>>  -->
-             <tr class="clickable" data-href="showroom.jsp?bedsPar=${dwm.beds}&bathroomPar=${dwm.bathrooms}&typePar=${dwm.roomType}&bedroomsPar=${dwm.bedrooms}&squareMetresPar=${dwm.squareMetres}&descriptionPar=${dwm.description}&rulesPar=${dwm.rules}&addressPar=${dwm.address}&pricePar=${dwm.price}">
+ <!--         <tr class="clickable" data-href="showroom.jsp?bedsPar=${dwm.beds}&bathroomPar=${dwm.bathrooms}&typePar=${dwm.roomType}&bedroomsPar=${dwm.bedrooms}&squareMetresPar=${dwm.squareMetres}&descriptionPar=${dwm.description}&rulesPar=${dwm.rules}&addressPar=${dwm.address}&pricePar=${dwm.price}"> -->  
+             <tr class="clickable" data-href="/showroom/${dwm.id}">
              <td><a href="https://www.google.gr"><img src=<c:out value = "${dwm.defaultPic}"/>></a> </td>
              <td><c:out value = "${dwm.price}"/> </td>
              <td><c:out value = "${dwm.roomType}"/></td>
