@@ -7,16 +7,66 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<style>
+div {
+    background-color:#C6DEFF;
+    width: 40%;
+    border: 25px brown;
+    padding: 5%;
+    margin: 5%;
+}
+body{
+background-color:#E6E6FA;
+margin-left:10%;
+margin-right:10%;
+}
+
+</style>
+
 <title>show room</title>
 </head>
 <body>
-hello room <br>
+<h1 style=margin-left:10%;margin-right:10%>Room info</h1><br>
+<div><b>Place:</b><br>
 <%
             String beds = request.getParameter("bedsPar");
+            String squareMetres=request.getParameter("squareMetresPar");
             String price=request.getParameter("pricePar");
+            String description=request.getParameter("descriptionPar");
+            String rules=request.getParameter("rulesPar");
+            String address=request.getParameter("addressPar");
+           /* String neighborhood=request.getParameter("neighborhoodPar");*/
 %>
-Number of beds : <%=beds %><br/>
-<br> 
-Price:<%=price %><br/>
+Number of beds : <%=beds %>
+<br>
+SquareMetres:<%=squareMetres %>
+<br>
+
+<br>
+<b>Description:</b>
+<br>
+<%=description %>
+<br>
+<br>
+<b>Rules:</b>
+<br>
+<%=rules%>
+<br>
+<!--  Price:-->
+
+<br>
+<b>Location:</b>
+<br>
+Map:
+<br>
+Address:<%=address %>
+<br>
+Neighborhood:
+<br>
+Transportation:
+<br>
+</div>
 </body>
 </html>
