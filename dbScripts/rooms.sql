@@ -15,6 +15,8 @@ CREATE TABLE country(
 
 CREATE TABLE roomsuser(
   id INT NOT NULL AUTO_INCREMENT,
+  username VARCHAR(128) NOT NULL ,
+  password VARCHAR(128) NOT NULL ,
   firstName VARCHAR(128) NOT NULL ,
   lastName VARCHAR(128) NOT NULL ,
   email VARCHAR(256) NOT NULL ,
@@ -120,11 +122,11 @@ CREATE TABLE review (
   ON DELETE CASCADE
 );
 
-INSERT INTO roomsuser (id,firstName,lastName,email,role) VALUES (1,'User1','First','user1@gmail.com','user');
-INSERT INTO roomsuser (id,firstName,lastName,email,role) VALUES (2,'User2','Second','user2@gmail.com','admin');
-INSERT INTO roomsuser (id,firstName,lastName,email,role) VALUES (3,'Owner','One','owner@gmail.com','owner');
-INSERT INTO roomsuser (id,firstName,lastName,email,role) VALUES (4,'John','Doe','jdoe@gmail.com','owner');
-INSERT INTO roomsuser (id,firstName,lastName,email,role) VALUES (5,'Jane','Doe','djane@gmail.com','owner');
+INSERT INTO roomsuser (id,username,password,firstName,lastName,email,role) VALUES (1,'user','user','User1','First','user1@gmail.com','user');
+INSERT INTO roomsuser (id,username,password,firstName,lastName,email,role) VALUES (2,'admin','admin','User2','Second','user2@gmail.com','admin');
+INSERT INTO roomsuser (id,username,password,firstName,lastName,email,role) VALUES (3,'owner','owner','Owner','One','owner@gmail.com','owner');
+INSERT INTO roomsuser (id,username,password,firstName,lastName,email,role) VALUES (4,'jdoe','jdoe','John','Doe','jdoe@gmail.com','owner');
+INSERT INTO roomsuser (id,username,password,firstName,lastName,email,role) VALUES (5,'jane','jane','Jane','Doe','djane@gmail.com','owner');
 
 INSERT INTO roomsowner (id,userid,url,description,location) VALUES (1,3,'www.something.com/001','Rents apartments','Athens,Greece');
 INSERT INTO roomsowner (id,userid,url,description,location) VALUES (2,4,'www.something.com/002','Traditional homes','Crete,Greece');
