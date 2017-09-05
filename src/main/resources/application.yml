@@ -27,7 +27,6 @@ spring:
             suffix: .jsp
 server:
     context-path: /rooms
-    servlet-path: /services
 
 logging:
     level:
