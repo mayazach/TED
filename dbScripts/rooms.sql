@@ -298,6 +298,45 @@ INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePe
 INSERT INTO rentdates (id,roomid,startdate,enddate) VALUES (1,1,'2017-01-01','2017-12-31');
 
 INSERT INTO photo (id,roomid,source) VALUES (1,1,'https://a0.muscache.com/im/pictures/3573a5d5-88e4-4562-9957-54d300f14191.jpg?aki_policy=xx_large');
+INSERT INTO photo (id,roomid,source) VALUES (2,3,'https://a0.muscache.com/im/pictures/19389470/5b561dc4_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (3,3,'https://a0.muscache.com/im/pictures/19389514/ebc862a7_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (4,3,'https://a0.muscache.com/im/pictures/19391005/734df0f6_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (5,3,'https://a0.muscache.com/im/pictures/19452395/5fcefaa2_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (6,3,'https://a0.muscache.com/im/pictures/19389602/3ea90594_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (7,3,'https://a0.muscache.com/im/pictures/19390869/bbb7f0c8_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (8,3,'https://a0.muscache.com/im/pictures/19389578/227b88a2_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (9,5,'https://a0.muscache.com/im/pictures/13462809/26642ff7_original.jpg?aki_policy=xx_large');
+INSERT INTO photo (id,roomid,source) VALUES (10,5,'https://a0.muscache.com/im/pictures/13462824/409f7c89_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (11,5,'https://a0.muscache.com/im/pictures/13462827/b5cab922_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (12,6,'https://a0.muscache.com/im/pictures/2261666/feafdec7_original.jpg?aki_policy=xx_large');
+INSERT INTO photo (id,roomid,source) VALUES (13,6,'https://a0.muscache.com/im/pictures/499ab449-3a41-4c71-8ae4-afed647156ce.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (14,6,'https://a0.muscache.com/im/pictures/ae7e0ee5-5749-4925-883e-2bec30b8963f.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (15,7,'https://a0.muscache.com/im/pictures/c72a679d-844d-4af5-9f34-dabded4f50a3.jpg?aki_policy=xx_large');
+INSERT INTO photo (id,roomid,source) VALUES (16,7,'https://a0.muscache.com/im/pictures/6fbfa257-0881-488f-bfc5-2ecf47d4bca6.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (17,7,'https://a0.muscache.com/im/pictures/11669134/847cf953_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (18,8,'https://a0.muscache.com/im/pictures/16887278/f6897183_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (19,8,'https://a0.muscache.com/im/pictures/29218188/0634710f_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (20,8,'https://a0.muscache.com/im/pictures/16887193/0449774d_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (21,11,'https://a0.muscache.com/im/pictures/4035997/1f7bae95_original.jpg?aki_policy=xx_large');
+INSERT INTO photo (id,roomid,source) VALUES (22,11,'https://a0.muscache.com/im/pictures/4036200/686fb6f0_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (23,11,'https://a0.muscache.com/im/pictures/9231266/0fd37965_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (24,11,'https://a0.muscache.com/im/pictures/4035960/a9074bdc_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (25,11,'https://a0.muscache.com/im/pictures/4036066/770889f7_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (26,14,'https://a0.muscache.com/im/pictures/809751/b774a22c_original.jpg?aki_policy=xx_large');
+INSERT INTO photo (id,roomid,source) VALUES (27,14,'https://a0.muscache.com/im/pictures/809753/e83ece72_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (28,14,'https://a0.muscache.com/im/pictures/809767/95199e31_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (29,15,'https://a0.muscache.com/im/pictures/809737/6ee32ca2_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (30,15,'https://a0.muscache.com/im/pictures/809739/22a7d8c7_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (31,18,'https://a0.muscache.com/im/pictures/13823443/c3e8c086_original.jpg?aki_policy=xx_large');
+INSERT INTO photo (id,roomid,source) VALUES (32,18,'https://a0.muscache.com/im/pictures/13823486/858308e9_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (33,18,'https://a0.muscache.com/im/pictures/13823538/f5e11135_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (34,19,'https://a0.muscache.com/im/pictures/19545966/f3c5ca96_original.jpg?aki_policy=xx_large');
+INSERT INTO photo (id,roomid,source) VALUES (35,19,'https://a0.muscache.com/im/pictures/19546033/5b40b1c8_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (36,19,'https://a0.muscache.com/im/pictures/19545962/5b569503_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (37,19,'https://a0.muscache.com/im/pictures/19546038/763cab60_original.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (38,20,'https://a0.muscache.com/im/pictures/93037580/328fad70_original.jpg?aki_policy=xx_large');
+INSERT INTO photo (id,roomid,source) VALUES (39,20,'https://a0.muscache.com/im/pictures/fd959bef-afbb-4c6d-82f0-9738c66bf113.jpg?aki_policy=x_large');
+INSERT INTO photo (id,roomid,source) VALUES (40,20,'https://a0.muscache.com/im/pictures/a4ed972c-103d-4b4f-853f-2ebdda92a179.jpg?aki_policy=x_large');
 
 INSERT INTO review (id,roomid,text,score) VALUES (1,1,'Great place!',95);
 
