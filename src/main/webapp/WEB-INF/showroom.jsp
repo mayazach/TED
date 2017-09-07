@@ -41,16 +41,22 @@ margin-right:10%;
 %>
 Number of beds <c:out value = "${room.beds}"/>
 <br>
-SquareMetres: 
+
+SquareMetres: <c:out value = "${room.squareMetres}"/>
 <br>
 
 <br>
-<b>Description:</b>
+<b>Description:</b><br>
+<c:out value = "${room.description}"/>
 <br>
+<br>
+<b>Amenities:</b>
+<c:out value = "${room.amenities}"/>
 
 <br>
 <br>
 <b>Rules:</b>
+<c:out value = "${room.rules}"/>
 <br>
 
 <br>
@@ -61,11 +67,11 @@ SquareMetres:
 <br>
 Map:
 <br>
-Address:
+Address:<c:out value = "${room.address}"/>
 <br>
-Neighborhood:
+Neighborhood:<c:out value = "${room.neighborhood}"/>
 <br>
-Transportation:
+Transportation:<c:out value = "${room.transport}"/>
 <br>
 <b>Photos:</b>
 <br>
