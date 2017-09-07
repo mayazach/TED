@@ -9,12 +9,12 @@
 <body>
     <!-- Login|Register -->
     <!--<button type="submit" value="Submit">Submit</button> -->
-    <button type="submit" class="login" onclick="" value="Login" id="lp">Login</button>
+    <button href="rooms/login" type="submit" class="login" onclick="" value="Login" id="lp">Login</button>
     <script type="text/javascript">
              document.getElementById("lp").onclick=function(){
-            	 location.href="rooms/login";
+            	 window.location.href=window.parent.location.href + "/login";
              };
-             </script>
+     </script>
      
     <button type="submit" class="login" onclick="" value="Register" id="rp">Register</button>
     <script type="text/javascript">
@@ -24,7 +24,7 @@
              </script>
     <h1 style=text-align:center>Welcome</h1>
     
-    <form id='user-opt' class=form1 action='/rooms/search' method='post'>
+    <form id='user-opt' class=form1 action='/rooms/search' method='get'>
 	    Location(Neighborhood/City/Country):<br>
 	    <input type="text" name="neigbourhood" value="">
 	    <input type="text" name="city" value="">

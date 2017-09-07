@@ -37,11 +37,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         	.csrf().disable();
     }
 	
-//	@Override
-//    public void configure(WebSecurity web) throws Exception {
-//        web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "/fonts/**");
-//    }
-//	
+	@Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "/fonts/**");
+    }
+	
 //	@Override
 //    protected void configure(HttpSecurity http) throws Exception {
 //        http

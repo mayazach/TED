@@ -21,7 +21,7 @@ public class SearchController {
 	
 	Logger logger = Logger.getLogger(SearchController.class.getName());
 	
-	@RequestMapping(value = "/search",method = RequestMethod.POST)
+	@RequestMapping(value = "/search",method = RequestMethod.GET)
 	public String search(Model model,@RequestParam("city") String city,@RequestParam(value="neighborhood",required=false)String neighborhood){
 		logger.info("Endpoint hit succesfully");
 		List<Room> rooms = new ArrayList<>();
