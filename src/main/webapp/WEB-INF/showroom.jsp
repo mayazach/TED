@@ -67,6 +67,11 @@ Neighborhood:
 <br>
 Transportation:
 <br>
+<b>Photos:</b>
+<br>
+<c:forEach var = "photo" items = "${photos}" >
+<img src =<c:out value = "${photo.source}"/> width="200" height="200"> 
+ </c:forEach>
 </div>
 </body>
 </html>
