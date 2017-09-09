@@ -16,6 +16,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	private MyUserDetailsService userDetailsService;
+	@Autowired
+	private CustomSuccessHandler customSuccessHandler;
 	
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -27,6 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
             .formLogin()
                 .loginPage("/login")
                 .permitAll()
+                .successHandler(customSuccessHandler)
                 .and()
             .logout()
                 .permitAll()

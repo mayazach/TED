@@ -3,9 +3,8 @@
 <head>
     <title>Login</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<!--    <link rel="stylesheet" type="text/css" href="css/form.css">
-    <link rel="stylesheet" type="text/css" href="css/layout.css">
-     --> 
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css"> 
 </head>
 <body>
     <h1 style=text-align:center>Login page</h1>

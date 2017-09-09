@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Admin Panel</title>
 </head>
 <body>
-    Hello ${name}
+    <h1>Coming soon</h1>
 </body>
 </html>
-
-
-
