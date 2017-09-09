@@ -23,7 +23,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/", "/search").permitAll()
+                .antMatchers("/", "/search","/showroom/**").permitAll()
+                .antMatchers("/adminpanel").hasAuthority("admin")
+                .antMatchers("/managerooms").hasAuthority("owner")
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
@@ -39,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "/fonts/**");
+        web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "/fonts/**","/WEB-INF**");
     }
 	
 	@Override
