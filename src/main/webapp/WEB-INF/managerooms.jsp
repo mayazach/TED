@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -10,7 +11,7 @@
 .manageform{
 text-align:center;
 background-color:lightblue;
-margin-bottom: 15%;
+margin-bottom: 5%;
 margin-left: 30%;
 margin-right: 30%;
 
@@ -25,62 +26,53 @@ color:green;
 color:brown;
 
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+tr:hover{
+   background-color: lightblue;
+}
+
+-->
 </style>
 
 <title>Manage</title>
 </head>
 <body>
 <h1 style="text-align:center">Manage your rooms</h1>
-<h2 style="text-align:center">Add a new room</h2>
-<form id='user-opt' class=manageform>
-<table>
-<tr>
-<td>Address:</td><td><input type="text" name="address"></td>
-</tr>
-<tr>
-<td>Transport:</td><td><input type="text" name="transport"></td>
-</tr>
-<tr>
-<td>Available from:</td><td><input type="text" name="time-beginning"></td>
-</tr>
-<tr>
-<td>Available to:</td><td><input type="text" name="time-end"></td>
+<h2 style="text-align:center">Your rooms</h2>
+<table style="width:100%">
+  <tr style="color:brown">
+    <th>Photo</th>
+    <th>Cost</th>
+    <th>Type</th>
+    <th>Number of beds</th>
+    <th>Average rating</th>
+   </tr>
+ <c:forEach var = "dwm" items = "${rooms}" >
+ 
+   <tr class="clickable" data-href="${pageContext.request.contextPath}/showroom/${dwm.id}">
+             <td><a href="https://www.google.gr"><img src=<c:out value = "${dwm.defaultPic}"/>></a> </td>
+             <td><c:out value = "${dwm.price}"/> </td>
+             <td><c:out value = "${dwm.roomType}"/></td>
+    
+             <td><c:out value = "${dwm.beds}"/></td>
+             <td><c:out value = "${dwm.reviewAvg}"/></td>
+   </tr>
+          </c:forEach>
+         </table>
 
-</tr>
-<tr>
-<td>Max guests:</td><td><input type="text" name="maxGuests"></td>
-</tr>
-<tr>
-<td>Minimum price:</td><td><input type="text" name="price"></td>
-</tr>
-<tr>
-<td>Extra cost per person:</td><td><input type="text" name="pricePerExtra;"></td>
-</tr>
-<tr>
-<td>Room type:</td><td><input type="text" name="roomType"></td>
-</tr>
-<tr>
-<td>Rules:</td><td><input type="text" name="rules"></td>
-</tr>
-<tr>
-<td>Description:</td><td><input type="text" name="description"></td>
-</tr>
-<tr>
-<td>Number of beds:</td><td><input type="text" name="beds"></td>
-</tr>
-<tr>
-<td>Number of bathrooms:</td><td><input type="text" name="bathrooms"></td>
-</tr>
-<tr>
-<td>Number of bedrooms:</td><td><input type="text" name="bedrooms"></td>
-</tr>
-<tr>
-<td>SquareMetres:</td><td><input type="text" name="SquareMetres"></td>
-</tr>
-<tr>
-<td><input type="submit" value="Submit"></td>
-</tr>
-</table>
+<!-- <button type="button" onclick="alert('A new room will be available')">ADD A NEW ROOM</button>-->
+<!--  <button type="button" onclick="/rooms/addroom">ADD A NEW ROOM</button> -->
+    <form action="/rooms/addroom">
+    <input type="submit" value="ADD A NEW ROOM" />
 </form>
+</body>
+</html>        
 </body>
 </html>
