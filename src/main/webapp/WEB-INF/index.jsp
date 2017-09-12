@@ -3,10 +3,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Room added</title>
 </head>
 <body>
-    Hello ${name}
+    <h2>Room added successfully</h2>
+     <script>
+        var timer = setTimeout(function() {
+            window.location='index.html'
+        }, 3000);
+    </script>
 </body>
 </html>
 

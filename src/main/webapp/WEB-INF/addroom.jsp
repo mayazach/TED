@@ -33,10 +33,13 @@ color:brown;
 <body>
 <h1 style="text-align:center">Manage your rooms</h1>
 <h2 style="text-align:center">Add a new room</h2>
-<form id='user-opt' class=manageform>
+<form id='user-opt' class=manageform action='${pageContext.request.contextPath}/newroom' method="post">
 <table>
 <tr>
-<td>Address:</td><td><input type="text" name="address"></td>
+<td>Name:*</td><td><input type="text" name="name"></td>
+</tr>
+<tr>
+<td>Address:*</td><td><input type="text" name="address"></td>
 </tr>
 <tr>
 <td>Transport:</td><td><input type="text" name="transport"></td>
@@ -49,31 +52,34 @@ color:brown;
 
 </tr>
 <tr>
+<td>Guests:*</td><td><input type="text" name="guests"></td>
+</tr>
+<tr>
 <td>Max guests:</td><td><input type="text" name="maxGuests"></td>
 </tr>
 <tr>
-<td>Minimum price:</td><td><input type="text" name="price"></td>
+<td>Minimum price:*</td><td><input type="text" name="price"></td>
 </tr>
 <tr>
 <td>Extra cost per person:</td><td><input type="text" name="pricePerExtra;"></td>
 </tr>
 <tr>
-<td>Room type:</td><td><input type="text" name="roomType"></td>
+<td>Room type:*</td><td><input type="text" name="roomType"></td>
 </tr>
 <tr>
 <td>Rules:</td><td><input type="text" name="rules"></td>
 </tr>
 <tr>
-<td>Description:</td><td><input type="text" name="description"></td>
+<td>Description:*</td><td><input type="text" name="description"></td>
 </tr>
 <tr>
-<td>Number of beds:</td><td><input type="text" name="beds"></td>
+<td>Number of beds:*</td><td><input type="text" name="beds"></td>
 </tr>
 <tr>
-<td>Number of bathrooms:</td><td><input type="text" name="bathrooms"></td>
+<td>Number of bathrooms:*</td><td><input type="text" name="bathrooms"></td>
 </tr>
 <tr>
-<td>Number of bedrooms:</td><td><input type="text" name="bedrooms"></td>
+<td>Number of bedrooms:*</td><td><input type="text" name="bedrooms"></td>
 </tr>
 <tr>
 <td>SquareMetres:</td><td><input type="text" name="SquareMetres"></td>

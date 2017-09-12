@@ -108,6 +108,15 @@ public class Room {
 	private Double reviewAvg;
 	
 	protected Room(){}
+	
+	public Room(Owner owner, String name, String url, int guests) {
+		this.owner = owner;
+		this.name = name;
+		this.url = url;
+		this.guests = guests;
+	}
+
+
 
 	public Room(Owner owner, String name, String url, String description, int guests, Integer maxGuests,
 			Double price, Double pricePerExtra, Double pricePerWeek, Double pricePerMonth, Integer squareMetres,

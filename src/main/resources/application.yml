@@ -11,6 +11,7 @@ spring:
             hibernate.dialect: org.hibernate.dialect.MySQLDialect
             hibernate.use_second_level_cache: true
             hibernate.user_query_cache: true
+            hibernate.id.new_generator_mappings: false
         database-platform: MYSQL
         hibernate:
             ddl-auto: update

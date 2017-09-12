@@ -16,6 +16,7 @@ import com.project.rooms.entities.Room;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
+
 @Controller
 public class RoomsManagementController {
 	Logger logger = Logger.getLogger(RoomsManagementController.class.getName());
