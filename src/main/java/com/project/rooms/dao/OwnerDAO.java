@@ -8,4 +8,6 @@ import com.project.rooms.entities.Owner;
 
 public interface OwnerDAO extends CrudRepository<Owner, Long>{
 
+	@Query("SELECT o FROM Owner o JOIN o.user u WHERE u.username = :username")
+	Owner getOwnerByUsername(@Param("username") String username);
 }
