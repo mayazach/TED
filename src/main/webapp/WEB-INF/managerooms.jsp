@@ -56,7 +56,7 @@ tr:hover{
    </tr>
  <c:forEach var = "dwm" items = "${rooms}" >
  
-   <tr class="clickable" data-href="${pageContext.request.contextPath}/showroom/${dwm.id}">
+   <tr class="clickable" data-href="${pageContext.request.contextPath}/roomdetails/${dwm.id}">
              <td><a href="https://www.google.gr"><img src=<c:out value = "${dwm.defaultPic}"/>></a> </td>
              <td><c:out value = "${dwm.price}"/> </td>
              <td><c:out value = "${dwm.roomType}"/></td>
