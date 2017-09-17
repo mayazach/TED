@@ -27,11 +27,27 @@ public class RoomAddContoller {
 	 }
 	 
 	 @RequestMapping(value = "/newroom",method = RequestMethod.POST)
-	 public String newroom(Authentication authentication,@RequestParam("name") String name,@RequestParam("guests") Integer guests,
+	 public String newroom(Authentication authentication,@RequestParam("name") String name,@RequestParam("address") String address,
+			 @RequestParam("guests") Integer guests,@RequestParam(value="maxGuests",required=false) Integer maxGuests,
+			 @RequestParam("price") Double price,@RequestParam(value="pricePerExtra",required=false) Double pricePerExtra,
+			 @RequestParam("roomType") String roomType,@RequestParam(value="rules",required=false) String rules,
+			 @RequestParam("description") String description,@RequestParam("bathrooms") Integer bathrooms ,@RequestParam("bedrooms") Integer bedrooms, 
 			 @RequestParam("beds") Integer numberOfBeds,@RequestParam(value="transport",required=false) String transport){
 		 String username = authentication.getName();
 		 Owner owner = ownerDAO.getOwnerByUsername(username);
 		 Room room = new Room(owner,name,"https://www.google.gr",guests);
+		 room.setAddress(address);
+		 if(maxGuests != null)
+			 room.setMaxGuests(maxGuests);
+		 room.setPrice(price);
+		 if(pricePerExtra != null)
+			 room.setPricePerExtra(pricePerExtra);
+		 room.setRoomType(roomType);
+		 if(rules != null)
+			 room.setRules(rules);
+		 room.setDescription(description);
+		 room.setBathrooms(bathrooms);
+		 room.setBedrooms(bedrooms);
 		 room.setBeds(numberOfBeds);
 		 if(transport != null)
 			 room.setTransport(transport);

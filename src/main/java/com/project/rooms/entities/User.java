@@ -42,10 +42,8 @@ public class User {
 	protected User() {}
 
 
-	public User(Long id, String username, String password, String firstName, String lastName, String email,
+	public User(String username, String password, String firstName, String lastName, String email,
 			String phone, String photoUrl, String role) {
-		super();
-		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.firstName = firstName;

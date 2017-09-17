@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.project.rooms.dao.RoomDAO;
 import com.project.rooms.entities.Room;
@@ -21,11 +22,23 @@ public class RoomDetailsController {
 		model.addAttribute("room",room);
 		return "roomdetails";
     }
+	
 	@RequestMapping(value="/updateroom/{id}",method = RequestMethod.POST)
-	public String updateRoom(Model model){
-    /*apla emfanizei mhnyma oti*/
-    /*h diadikasia petyxe*/
-    /*kai kanei redirect sthn arxikh selida*/
+	public String updateRoom(Model model,@PathVariable("id") Long id,@RequestParam("name") String name,@RequestParam("address") String address,
+			@RequestParam("guests") Integer guests,@RequestParam("price") Double price,@RequestParam("roomType") String type,
+			@RequestParam("description") String description,@RequestParam("beds") Integer beds,@RequestParam("bedrooms") Integer bedrooms,
+			@RequestParam("bathrooms") Integer bathrooms){
+    Room room = roomDAO.findOne(id);
+    room.setName(name);
+    room.setAddress(address);
+    room.setGuests(guests);
+    room.setPrice(price);
+    room.setRoomType(type);
+    room.setDescription(description);
+    room.setBeds(beds);
+    room.setBedrooms(bedrooms);
+    room.setBathrooms(bathrooms);
+    roomDAO.save(room);
 	return "updateroom";
 	}
 }
