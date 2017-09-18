@@ -28,12 +28,12 @@ spring:
             suffix: .jsp
 server:
     context-path: /rooms
-#    port: 8443
-#    server.ssl.enabled: true
-#    server.ssl.key-store: keystore.p12
-#    server.ssl.key-store-password: password
-#    server.ssl.keyStoreType: PKCS12
-#    server.ssl.keyAlias: tomcat
+    port: 8443
+    ssl:
+        key-store: src/main/resources/keystore.p12
+        key-store-password: password
+        key-store-type: PKCS12
+        key-alias: tomcat
 
 logging:
     level:
