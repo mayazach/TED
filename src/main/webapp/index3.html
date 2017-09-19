@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+<body>
+    <h1 style=text-align:center>Register page</h1>
+    <form id='user-opt'class=form3>
+    Username:<br>
+    <input type="text" name="username">
+       
+    <br>
+    Password:<br>
+    <input type="text" name="password"> 
+    
+    <br>
+    Confirm password:<br>
+    <input type="text" name="password">
+    <br>
+    First name:<br>
+    <input type="text" name="fname">
+    <br>
+    Last name:<br>
+    <input type="text" name="lname">
+    <br>
+    Email:<br>
+    <input type="text" name="email">
+    <br>
+    Phone number:<br>
+    <input type="text" name="phone">
+    <br>
+    Subscribe as:<br>
+    <!-- <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
+    <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>-->
+    <input type="checkbox" id="h">Host  <br>
+     <script type="text/javascript">
+     function host_checked(){
+     if(document.getElementById("h").checked==1)
+    	 alert("Your application for being host  needs to be approved");
+     };
+    
+     </script>
+    <input type="checkbox">Tenant<br>
+    
+   </form> 
+   <button type="submit" class="continue" onclick="register_func()" value="Login">Register</button>
+    <script>
+    function register_func()
+    {
+    alert("Registration success!!")	
+    host_checked();	
+    location.href="index.html";
+    	
+    	
+    }
+    
+    
+    </script>
+    

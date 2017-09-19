@@ -1,0 +1,40 @@
+html {
+	height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+
+body {
+	margin: 50;
+        position: relative;
+	min-height: 100%;
+	background-color: rgb(245, 245, 245);/*rgb(180, 210, 255);*/
+	font-family: Helvetica;
+	color: black;
+}
+
+.login {
+    position: relative;
+    top: 90%;
+    left:70%;
+    right: 20%;
+}
+
+.continue {
+   margin:50;
+   position:relative;
+   text-align:center;
+   left:50%;
+   top:90%; 
+   color:blue;
+   width:15%;
+
+}
