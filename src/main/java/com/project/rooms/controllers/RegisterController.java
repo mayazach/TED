@@ -20,7 +20,7 @@ public class RegisterController {
 			@RequestParam("mail") String mail,@RequestParam("phone") String phone,@RequestParam("role") String role){
 		User user = new User(username,password,firstName,lastName,mail,phone,"photourl","user");
 		userDAO.save(user);
-		return "updateroom";
+		return "updateroom.jsp";
 	}
 
 }

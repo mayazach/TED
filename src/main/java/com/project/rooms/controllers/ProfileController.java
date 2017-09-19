@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.project.rooms.dao.OwnerDAO;
 import com.project.rooms.dao.UserDAO;
 import com.project.rooms.entities.User;
 
@@ -28,7 +27,7 @@ public class ProfileController {
     User user=userDAO.findUserByUsername(username);
     model.addAttribute("user",user);
     
-    return "profile";	
+    return "profile.jsp";	
 	}
 	
 	@RequestMapping(value="/editprofile",method=RequestMethod.GET)
@@ -37,7 +36,7 @@ public class ProfileController {
 	String username= authentication.getName();
 	User user=userDAO.findUserByUsername(username);
 	model.addAttribute("user",user);
-	return "editprofile";
+	return "editprofile.jsp";
 	}		
 	
     @RequestMapping(value="/updateprofile",method = RequestMethod.POST)
@@ -57,7 +56,7 @@ public class ProfileController {
     	user.setPhone(phone);
         userDAO.save(user);
     	
-     	return "updateprofile";	
+     	return "updateprofile.jsp";	
     }
     }
 	

@@ -20,6 +20,6 @@ public class OwnerController {
 	public String showOwner(Model model,@PathVariable("id") Long id){
 		Owner owner = ownerDAO.findOne(id);
 		model.addAttribute("owner",owner);
-		return "contactowner";
+		return "contactowner.jsp";
 	}
 }

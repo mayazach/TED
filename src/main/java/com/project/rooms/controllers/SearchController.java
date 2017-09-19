@@ -29,7 +29,7 @@ public class SearchController {
 			rooms.add(room);
 		logger.info(city);
 		model.addAttribute("rooms",rooms);
-		return "search";
+		return "search.jsp";
 	}
 
 }

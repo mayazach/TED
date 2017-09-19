@@ -31,7 +31,7 @@ public class RoomController {
 		List<Photo> photos = photoDAO.findPhotosByRoom(room);
 		model.addAttribute("room",room);
 		model.addAttribute("photos",photos);
-        return "showroom";
+        return "showroom.jsp";
     }
 
 }

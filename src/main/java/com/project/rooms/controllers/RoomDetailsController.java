@@ -20,7 +20,7 @@ public class RoomDetailsController {
 	public String roomDetails(Model model, @PathVariable("id") Long id){
 		Room room = roomDAO.findOne(id);
 		model.addAttribute("room",room);
-		return "roomdetails";
+		return "roomdetails.jsp";
     }
 	
 	@RequestMapping(value="/updateroom/{id}",method = RequestMethod.POST)
@@ -39,7 +39,7 @@ public class RoomDetailsController {
     room.setBedrooms(bedrooms);
     room.setBathrooms(bathrooms);
     roomDAO.save(room);
-	return "updateroom";
+	return "updateroom.jsp";
 	}
 }
 

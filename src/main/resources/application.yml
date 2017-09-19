@@ -24,8 +24,7 @@ spring:
                     paths:
     mvc:
         view:
-            prefix: /WEB-INF/
-            suffix: .jsp
+            prefix: /jsp/
 server:
     context-path: /rooms
     port: 8443

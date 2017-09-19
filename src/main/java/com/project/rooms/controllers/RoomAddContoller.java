@@ -53,7 +53,7 @@ public class RoomAddContoller {
 			 room.setTransport(transport);
 		 roomDAO.save(room);
 		 
-	     return "index";
+	     return "../index.html";
 	 }
 	 
 }

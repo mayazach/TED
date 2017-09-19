@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,7 +28,7 @@ public class AdminPanelController {
 		for(User user: userDAO.findAllUsers())
 			users.add(user);
 		model.addAttribute("users",users);
-		return "adminpanel";
+		return "adminpanel.jsp";
 		
 	}	
 	@RequestMapping(value="/userdetails/{username}",method=RequestMethod.GET)
@@ -39,7 +38,7 @@ public class AdminPanelController {
     logger.info(username);	
     User user=userDAO.findUserByUsername(username);
     model.addAttribute("user",user);
-    return "userdetails";
+    return "userdetails.jsp";
 	}
 	
 }

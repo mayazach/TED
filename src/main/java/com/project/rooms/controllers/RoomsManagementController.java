@@ -36,6 +36,6 @@ public class RoomsManagementController {
 		for(Room room: roomDAO.findRoomByOwner(owner))
 			rooms.add(room); 
 		model.addAttribute("rooms",rooms);
-		return "managerooms";
+		return "managerooms.jsp";
 	 }
  }
