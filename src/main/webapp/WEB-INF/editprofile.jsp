@@ -30,7 +30,17 @@ button {
     border-color:black;
     padding: 8px;
     cursor: pointer;
-    width: 50%;
+    width: 100%;
+    font-size: 18px;
+    hover:red;
+    
+}
+.sub{
+    border-style:solid ;
+    border-color:black;
+    padding: 8px;
+    cursor: pointer;
+    width: 100%;
     font-size: 18px;
     hover:red;
     
@@ -42,38 +52,41 @@ h1{
 
 
 </style>
-<title>Insert title here</title>
+<title>Edit profile</title>
 </head>
 <body>
 <div class="card">
 <h1 style=margin-left:10%;margin-right:10%><c:out value = "${user.username}"/></h1>
-<br>
-<b>FirstName:</b><c:out value = "${user.firstName}"/>
-<br>
+<form  action='${pageContext.request.contextPath}/updateprofile' method="post">
+<table>
+<tr>
+<td><b>FirstName:</b></td><td><input type="text" name="firstName" value="${user.firstName}"></td>
+</tr>
+<tr>
 
-<b>LastName:</b><c:out value = "${user.lastName}"/>
-
-<br>
-<b>Email:</b><c:out value = "${user.email}"/>
-<br>
-<b>Phone:</b><c:out value = "${user.phone}"/>
-<br>
-<b>Role:</b><c:out value = "${user.role}"/>
-<br>
-<br>
- <button class="edit" type="submit" id="editf">Edit profile</button> 
-<br>
-<br>
-<button class="passf" type="submit" id="passf">Change password</button>
+<td><b>LastName:</b></td><td><input type="text" name="lastName" value="${user.lastName}"></td>
+</tr>
+<tr>
+<td><b>Email:</b></td><td><input type="text" name="email" value="${user.email}"></td>
+</tr>
+<tr>
+<td><b>Phone:</b></td><td><input type="text" name="phone" value="${user.phone}"></td>
+</tr>
+<tr>
+<td><b>Role:</b></td><td><c:out value ="${user.role}"/></td>
+</tr>
+<tr>
+<td><input class="sub" type="submit" value="Submit"></td>
+</tr>
+</table>
+</form>
+<!--<br>
+<button class="edit" type="submit" value="Submit">Submit your changes</button>
+-->
 </div>
 
  <script type="text/javascript">
              document.getElementById("editf").onclick=function(){
-            	 window.location.href='/rooms/editprofile';
-             };
-             </script>
- <script type="text/javascript">
-             document.getElementById("passf").onclick=function(){
             	 location.href="https://www.google.gr";
              };
              </script>
