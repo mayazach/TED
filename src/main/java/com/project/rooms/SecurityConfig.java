@@ -22,8 +22,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-//        	.requiresChannel()
-//        		.and()
+        	.requiresChannel()
+        		.and()
             .authorizeRequests()
                 .antMatchers("/", "/search","/showroom/**","/index3.html").permitAll()
                 .antMatchers("/adminpanel").hasAuthority("admin")
