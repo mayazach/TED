@@ -30,6 +30,7 @@ public class ProfileController {
     return "profile.jsp";	
 	}
 	
+	/*form to edit profile*/
 	@RequestMapping(value="/editprofile",method=RequestMethod.GET)
 	public String editprofile(Model model,Authentication authentication)
 	{
@@ -39,6 +40,8 @@ public class ProfileController {
 	return "editprofile.jsp";
 	}		
 	
+	
+	/*update profile and inform the user*/
     @RequestMapping(value="/updateprofile",method = RequestMethod.POST)
     public String updateprofile(Model model,Authentication authentication,@RequestParam("firstName") String firstName,
     		@RequestParam("lastName") String lastName,@RequestParam("email") String email,@RequestParam("phone") String phone){ 	
@@ -58,8 +61,37 @@ public class ProfileController {
     	
      	return "updateprofile.jsp";	
     }
+    
+    /*form to change password*/
+    @RequestMapping(value="/changepassword",method = RequestMethod.GET)
+    public String changepassword(Model model,Authentication authentication)
+    {
+    String username=authentication.getName();
+    User user=userDAO.findUserByUsername(username);
+    String password=user.getPassword();
+    logger.info("password");
+    logger.info(password);
+    model.addAttribute("user",user);
+    model.addAttribute("password",password);
+
+    return "changepassword.jsp";
     }
+    
+   /*update password and inform the user*/ 
+   @RequestMapping(value="/updatepassword",method = RequestMethod.POST)
+   public String updatepassword(Model model,Authentication authentication,@RequestParam("newpw") String newpw)
+   {
+	   String username=authentication.getName();
+	   User user=userDAO.findUserByUsername(username); 
+	   user.setPassword(newpw);
+	   userDAO.save(user);
+	   
+	   return "updatepassword.jsp";
+	   
+   }
+    
+    
 	
-	
+}	
 
 

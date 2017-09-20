@@ -74,7 +74,7 @@ h1{
              </script>
  <script type="text/javascript">
              document.getElementById("passf").onclick=function(){
-            	 location.href="https://www.google.gr";
+            	 location.href='/rooms/changepassword';
              };
              </script>
 </body>
