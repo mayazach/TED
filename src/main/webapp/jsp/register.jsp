@@ -9,7 +9,7 @@
 	<body>
 		<form class=form1 action="${pageContext.request.contextPath}/registerUser" method="post">
 			<h2>User Registration</h2>
-			<table>
+			<table align="center">
 				<tr>
 					<td><label for="uname">Username:</label></td>
 					<td><input type ="text" id="uname" name="uname"></td>

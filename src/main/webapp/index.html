@@ -5,8 +5,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/form.css">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
 </head>
 <body>
+	<nav id="loginbar">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="rooms/login">Login</a></li>
+			<li><a href="register">Register</a></li>
+		</ul>		
+	</nav>
+	<nav id="logoutbar" style=display:none>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="rooms/login">Login</a></li>
+			<li><a href="profile">Profile</a></li>
+		</ul>		
+	</nav>
     <!-- Login|Register -->
     <!--<button type="submit" value="Submit">Submit</button> -->
     <button href="rooms/login" type="submit" class="login" onclick="" value="Login" id="lp">Login</button>
@@ -19,7 +34,7 @@
     <button type="submit" class="login" onclick="" value="Register" id="rp">Register</button>
     <script type="text/javascript">
              document.getElementById("rp").onclick=function(){
-            	 location.href="index3.html";
+            	 window.location.href=window.parent.location.href + "/register";
              };
              </script>
     <h1 style=text-align:center>Welcome</h1>

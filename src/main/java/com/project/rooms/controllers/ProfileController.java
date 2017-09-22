@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.project.rooms.dao.OwnerDAO;
 import com.project.rooms.dao.UserDAO;
+import com.project.rooms.entities.Owner;
 import com.project.rooms.entities.User;
 
 @Controller
@@ -19,15 +21,22 @@ public class ProfileController {
 	
 	@Autowired
 	private UserDAO userDAO;
+	@Autowired
+	private OwnerDAO ownerDAO;
 	
 	@RequestMapping(value = "/profile",method = RequestMethod.GET)
 	public String profilepage(Model model,Authentication authentication){
     String username = authentication.getName();
     logger.info(username);
     User user=userDAO.findUserByUsername(username);
-    model.addAttribute("user",user);
-    
-    return "profile.jsp";	
+    try{
+    	Owner owner = ownerDAO.getOwnerByUsername(username);
+    	model.addAttribute("owner",owner);
+    	return "profile.jsp";
+    }catch (NullPointerException e){
+	    model.addAttribute("user",user);
+	    return "profile.jsp";
+    }
 	}
 	
 	/*form to edit profile*/
