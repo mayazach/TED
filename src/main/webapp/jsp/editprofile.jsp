@@ -46,6 +46,10 @@ button {
     
 }
 
+
+.hidden{
+   display:none;
+}
 h1{
   color:green;
 }
@@ -54,7 +58,21 @@ h1{
 </style>
 <title>Edit profile</title>
 </head>
-<body>
+<body onload="showHide()">
+<script>
+      function showHide(){      
+	  var owner_profile="${is_owner}";
+	  var hiddeninputs=document.getElementsByClassName("hidden");
+	  for(var i=0;i!=hiddeninputs.length;i++)
+		  {
+		   if(owner_profile==1)
+			   {
+			   hiddeninputs[i].style.display="block";
+			   }
+		  }
+	  }
+</script>
+
 <div class="card">
 <h1 style=margin-left:10%;margin-right:10%><c:out value = "${user.username}"/></h1>
 <form  action='${pageContext.request.contextPath}/updateprofile' method="post">
@@ -63,7 +81,6 @@ h1{
 <td><b>FirstName:</b></td><td><input type="text" name="firstName" value="${user.firstName}"></td>
 </tr>
 <tr>
-
 <td><b>LastName:</b></td><td><input type="text" name="lastName" value="${user.lastName}"></td>
 </tr>
 <tr>
@@ -75,6 +92,16 @@ h1{
 <tr>
 <td><b>Role:</b></td><td><c:out value ="${user.role}"/></td>
 </tr>
+<tr>
+<td><label class="hidden"><b>Url:</b></label></td><td><input type="text" name="url" value="${owner.url}" class="hidden"></td>
+</tr>
+<tr>
+<td><label class="hidden"><b>Description:</b></label></td><td><input type="text" name="description" value="${owner.description}" class="hidden"></td>
+</tr>
+<tr>
+<td><label class="hidden"><b>Location:</b></label></td><td><input type="text" name="location" value="${owner.location}" class="hidden"></td>
+</tr>
+<tr>
 <tr>
 <td><input class="sub" type="submit" value="Submit"></td>
 </tr>

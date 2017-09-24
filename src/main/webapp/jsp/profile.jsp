@@ -25,6 +25,10 @@
     hover:red;
     
 }
+.hidden{
+   display:none;
+}
+
 button {
     border-style:solid ;
     border-color:black;
@@ -39,12 +43,31 @@ button {
 h1{
   color:green;
 }
-
-
 </style>
+
+
 <title>Insert title here</title>
 </head>
-<body>
+<body onload="showHide()">
+<script>
+function dokimi(){
+	alert("yes");
+	
+}
+</script>
+<script>
+      function showHide(){      
+	  var owner_profile="${is_owner}";
+	  var hiddeninputs=document.getElementsByClassName("hidden");
+	  for(var i=0;i!=hiddeninputs.length;i++)
+		  {
+		   if(owner_profile==1)
+			   {
+			   hiddeninputs[i].style.display="block";
+			   }
+		  }
+	  }
+</script>
 <div class="card">
 <h1 style=margin-left:10%;margin-right:10%><c:out value = "${user.username}"/></h1>
 <br>
@@ -60,8 +83,17 @@ h1{
 <br>
 <b>Role:</b><c:out value = "${user.role}"/>
 <br>
+<div class="hidden"><b>Url:</b><c:out value = "${owner.url}"/>
 <br>
- <button class="edit" type="submit" id="editf">Edit profile</button> 
+</div>
+<div class="hidden"><b>Description:</b><c:out value = "${owner.description}"/>
+<br>
+</div>
+<div class="hidden"><b>Location:</b><c:out value = "${owner.location}"/>
+<br>
+</div>
+<br>
+<button class="edit" type="submit" id="editf">Edit profile</button> 
 <br>
 <br>
 <button class="passf" type="submit" id="passf">Change password</button>
