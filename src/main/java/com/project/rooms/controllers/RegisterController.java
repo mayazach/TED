@@ -22,5 +22,4 @@ public class RegisterController {
 		userDAO.save(user);
 		return "updateroom.jsp";
 	}
-
 }

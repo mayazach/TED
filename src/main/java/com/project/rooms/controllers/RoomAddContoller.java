@@ -23,7 +23,7 @@ public class RoomAddContoller {
 	
 	 @RequestMapping(value = "/addroom",method = RequestMethod.GET)
 	 public String addroom(Model model){
-	 return "addroom";
+	 return "addroom.jsp";
 	 }
 	 
 	 @RequestMapping(value = "/newroom",method = RequestMethod.POST)

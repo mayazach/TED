@@ -11,6 +11,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import com.project.rooms.dao.UserDAO;
 import com.project.rooms.entities.User;
@@ -46,5 +47,14 @@ public class UserController {
         else {
             return "anonymous";
         }
+	}
+	
+	@GetMapping("/usernameExists/{username}")
+	String usernameExists(@PathVariable String username){
+		User user = userDAO.findUserByUsername(username);
+		if(user != null)
+			return "true";
+		else
+			return "false";
 	}
 }
