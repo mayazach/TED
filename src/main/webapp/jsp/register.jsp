@@ -24,7 +24,7 @@
 				<li><a href="logout">Logout</a></li>
 			</ul>		
 		</nav>
-		<form class=form1 action="${pageContext.request.contextPath}/registerUser" method="post">
+		<form class=form1 action="${pageContext.request.contextPath}/registerUser" method="post" id="registerform">
 			<h2>User Registration</h2>
 			<table align="center">
 				<tr>
@@ -73,7 +73,7 @@
 				</tr>
 			</table>
 			<input type="reset" value="Reset"/>
-			<input type="submit" value="Submit"/>
+			<input type="submit" value="Submit" id="submit"/>
 		</form>
 		<script src="js/register.js"></script>
 	</body>

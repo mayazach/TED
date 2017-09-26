@@ -1,3 +1,7 @@
+$(document).ready(function(){
+	document.getElementById("submit").disabled = true;
+});
+
 document.getElementById("uname").onblur = function(){
 				var username = document.getElementById("uname").value;
 				$.ajax({type: "GET", 
@@ -49,3 +53,20 @@ document.getElementById("uname").onblur = function(){
 									document.getElementById("confcheck").style.color = "green";
 								}
 							}
+			
+$(":input").blur(function() {
+	var inputs = document.getElementById("registerform").elements;
+	var cansubmit = true;
+	for (var i = 0; i < inputs.length; i++) {
+        if(inputs[i].value.length == 0 && inputs[i].name != "filename")
+        	cansubmit = false;
+    }
+	if(document.getElementById("ucheck").textContent != "OK")
+		cansubmit = false;
+	if(document.getElementById("pcheck").textContent != "OK")
+		cansubmit = false;
+	if(document.getElementById("confcheck").textContent != "OK")
+		cansubmit = false;
+	if(cansubmit == true)
+		document.getElementById("submit").disabled = false;
+});
