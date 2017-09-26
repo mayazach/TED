@@ -25,7 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         	.requiresChannel()
         		.and()
             .authorizeRequests()
-                .antMatchers("/", "/search","/showroom/**","/index3.html","/register","index.html").permitAll()
+                .antMatchers("/", "/search","/showroom/**","/index3.html","/register","index.html","/logged").permitAll()
                 .antMatchers("/adminpanel").hasAuthority("admin")
                 .antMatchers("/managerooms","/addroom").hasAuthority("owner")
                 .anyRequest().authenticated()
@@ -37,6 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .and()
             .logout()
                 .permitAll()
+                .logoutSuccessUrl("/index.html").permitAll()
         		.and()
         	.csrf().disable();
     }

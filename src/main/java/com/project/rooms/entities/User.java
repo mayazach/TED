@@ -40,6 +40,11 @@ public class User {
 	private String role;
 
 	protected User() {}
+	
+	public User(String username,String role){
+		this.username = username;
+		this.role = role;
+	}
 
 
 	public User(String username, String password, String firstName, String lastName, String email,
