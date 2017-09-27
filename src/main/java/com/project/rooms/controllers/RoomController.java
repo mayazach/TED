@@ -29,6 +29,15 @@ public class RoomController {
     public String hello(Model model,@PathVariable("id") Long id) {
 		Room room = roomDAO.findOne(id);
 		List<Photo> photos = photoDAO.findPhotosByRoom(room);
+		
+		/*String amenities*/
+		String str1=room.getAmenities();
+		String str2=str1.replace("{", "");
+		String str3=str2.replace("}","");
+		String amenities=str3.replace("\"","");
+		logger.info(amenities);
+		model.addAttribute("amenities",amenities);
+		
 		model.addAttribute("room",room);
 		model.addAttribute("photos",photos);
         return "showroom.jsp";
