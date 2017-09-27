@@ -69,4 +69,6 @@ $(":input").blur(function() {
 		cansubmit = false;
 	if(cansubmit == true)
 		document.getElementById("submit").disabled = false;
+	else
+		document.getElementById("submit").disabled = true;
 });

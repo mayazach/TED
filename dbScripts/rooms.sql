@@ -122,6 +122,26 @@ CREATE TABLE review (
   ON DELETE CASCADE
 );
 
+CREATE TABLE message (
+  id INT NOT NULL AUTO_INCREMENT,
+  senderid INT NOT NULL ,
+  recipientid INT NOT NULL ,
+  subject VARCHAR(256) ,
+  text TEXT(1500) ,
+  dateSent DATE,
+  PRIMARY KEY (id)
+  ,
+  CONSTRAINT messageid_senderid_FK
+  FOREIGN KEY (senderid)
+  REFERENCES roomsuser (id)
+  ON DELETE CASCADE
+  ,
+  CONSTRAINT messageid_recipientid_FK
+  FOREIGN KEY (recipientid)
+  REFERENCES roomsuser (id)
+  ON DELETE CASCADE
+);
+
 INSERT INTO roomsuser (id,username,password,firstName,lastName,email,role) VALUES (1,'user','user','User1','First','user1@gmail.com','user');
 INSERT INTO roomsuser (id,username,password,firstName,lastName,email,role) VALUES (2,'admin','admin','User2','Second','user2@gmail.com','admin');
 INSERT INTO roomsuser (id,username,password,firstName,lastName,email,role) VALUES (3,'owner','owner','Owner','One','owner@gmail.com','owner');
