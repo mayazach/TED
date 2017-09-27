@@ -8,6 +8,18 @@
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/navbar.js"></script>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+     <script>
+         $(function() {
+            $( "#datepicker-1" ).datepicker( { dateFormat: "dd-mm-yy" });
+         });
+         $(function() {
+             $( "#datepicker-2" ).datepicker({ dateFormat: "dd-mm-yy" });
+          });
+     </script>
 </head>
 <body>
 	<nav id="loginbar">
@@ -24,42 +36,39 @@
 			<li><a href="logout">Logout</a></li>
 		</ul>		
 	</nav>
-    <!-- Login|Register -->
-    <!--<button type="submit" value="Submit">Submit</button> -->
-    <button href="rooms/login" type="submit" class="login" onclick="" value="Login" id="lp">Login</button>
-    <script type="text/javascript">
-             document.getElementById("lp").onclick=function(){
-            	 window.location.href=window.parent.location.href + "/login";
-             };
-     </script>
-     
-    <button type="submit" class="login" onclick="" value="Register" id="rp">Register</button>
-    <script type="text/javascript">
-             document.getElementById("rp").onclick=function(){
-            	 window.location.href=window.parent.location.href + "/register";
-             };
-             </script>
+	
     <h1 style=text-align:center>Welcome</h1>
     
     <form id='user-opt' class=form1 action='/rooms/search' method='get'>
-	    Location(Neighborhood/City/Country):<br>
-	    <input type="text" name="neigbourhood" value="">
-	    <input type="text" name="city" value="">
-	    <input type="text" name="country" value="">
-	    
-	    <br>
-	    Time(Arrival/Departure):<br>
+	    <table align="center">
+	    <tr><td colspan=2>Location:</td></tr>
+	    <tr>
+	    <td>Neighborhood:</td><td><input type="text" name="neigbourhood" value=""></td>
+	    </tr>
+	    <tr>
+	    <td>City:</td><td><input type="text" name="city" value=""></td>
+	    </tr>
+	    <tr>
+	    <td>Country:</td><td><input type="text" name="country" value=""></td>
+	    </tr>
 	    <!-- <input type="text" name="time" value=""> -->
 	    <!-- <input type="text" name="time" value=""> -->
-	    <input type="date" name="time-arrival">
-	    <input type="date" name="time-departure">
+	    <tr><td colspan=2>Time:</tr>
+	    <tr>
+	    <td>Arrival:</td> <td><input type="text" name="time-arrival" id="datepicker-1"></td>
+	    </tr>
+	    <tr>
+	    <td>Departure:</td><td><input type="text" name="time-departure" id="datepicker-2" ></td>
+	    </tr>
+	   
 	    
 	    <!-- <script>alert("hello!");</script> -->
 	    
+	   
+	    <tr>
+	    <td>Number of people:</td><td><input type="text" name="location"></td></tr>
+	    </table>
 	    <br>
-	    Number of people:<br>
-	    <input type="number" name="location">
-	    <br><br>
 	    <input type="submit" value="Submit">
 	</form>
     <!-- <script>

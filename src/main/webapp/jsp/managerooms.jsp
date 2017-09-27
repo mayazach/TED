@@ -35,9 +35,17 @@
 	    padding: 5px;
 	    text-align: left;
 	}
-	tr:hover{
+	.clickable:hover{
 	   background-color: lightblue;
 	}
+	
+	.addform{
+	   text-align:right;
+	   margin-right:10%;
+	
+	   
+	}
+	
 	
 	-->
 	</style>
@@ -61,6 +69,11 @@
 			<li><a href="logout">Logout</a></li>
 		</ul>		
 	</nav>
+	<br>
+	<br>
+	 <form class="addform" action="/rooms/addroom">
+	    <input type="submit" value="ADD A NEW ROOM" />
+	</form>
 	<h1 style="text-align:center">Manage your rooms</h1>
 	<h2 style="text-align:center">Your rooms</h2>
 	<table style="width:100%">
@@ -86,9 +99,9 @@
 	
 	<!-- <button type="button" onclick="alert('A new room will be available')">ADD A NEW ROOM</button>-->
 	<!--  <button type="button" onclick="/rooms/addroom">ADD A NEW ROOM</button> -->
-	    <form action="/rooms/addroom">
+	    <!--  <form action="/rooms/addroom">
 	    <input type="submit" value="ADD A NEW ROOM" />
-	</form>
+	</form>-->
 	<script type="text/javascript">
 	var elements = document.getElementsByClassName('clickable');
 	/*location.href="index3.html";*/

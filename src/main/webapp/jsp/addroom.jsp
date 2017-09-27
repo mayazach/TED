@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/form.css">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+	
 	<style>
 	.manageform{
 	text-align:center;
@@ -32,6 +33,21 @@
 	<title>Add</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/navbar.js"></script>
+     <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#datepicker-1" ).datepicker( { dateFormat: "dd-mm-yy" });
+         });
+         $(function() {
+            $( "#datepicker-2" ).datepicker({ dateFormat: "dd-mm-yy" });
+         });
+      </script>
+   </head>
 </head>
 <body>
 	<nav id="loginbar">
@@ -62,10 +78,10 @@
 	<td>Transport:</td><td><input type="text" name="transport"></td>
 	</tr>
 	<tr>
-	<td>Available from:</td><td><input type="text" name="time-beginning"></td>
+	<td>Available from:</td><td><input type="text" name="time-beginning" id="datepicker-1"></td>
 	</tr>
 	<tr>
-	<td>Available to:</td><td><input type="text" name="time-end"></td>
+	<td>Available to:</td><td><input type="text" name="time-end" id="datepicker-2"></td>
 	
 	</tr>
 	<tr>
