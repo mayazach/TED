@@ -24,10 +24,10 @@
 	}
 	
 	</style>
-	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
 	<title>show room</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/navbar.js"></script>
+    <script src="../js/navbar.js"></script>
 </head>
 <body>
 	<nav id="loginbar">
