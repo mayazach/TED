@@ -66,7 +66,7 @@
 	</nav>
 	<h1 style="text-align:center">Manage your rooms</h1>
 	<h2 style="text-align:center">Add a new room</h2>
-	<form id='user-opt' class=manageform action='${pageContext.request.contextPath}/newroom' method="post">
+	<form id='user-opt' class=manageform action= "${pageContext.request.contextPath}/newroom" method="post">
 	<table>
 	<tr>
 	<td>Name:*</td><td><input type="text" name="name"></td>
