@@ -69,10 +69,10 @@
 	<form id='user-opt' class=manageform action= "${pageContext.request.contextPath}/newroom" method="post">
 	<table>
 	<tr>
-	<td>Name:*</td><td><input type="text" name="name"></td>
+	<td>Name:*</td><td><input type="text"  name="name" class="necessary"></td>
 	</tr>
 	<tr>
-	<td>Address:*</td><td><input type="text" name="address"></td>
+	<td>Address:*</td><td><input type="text"  name="address" class="necessary"></td>
 	</tr>
 	<tr>
 	<td>Transport:</td><td><input type="text" name="transport"></td>
@@ -85,42 +85,43 @@
 	
 	</tr>
 	<tr>
-	<td>Guests:*</td><td><input type="text" name="guests"></td>
+	<td>Guests:*</td><td><input type="text" name="guests" class="necessary"></td>
 	</tr>
 	<tr>
 	<td>Max guests:</td><td><input type="text" name="maxGuests"></td>
 	</tr>
 	<tr>
-	<td>Minimum price:*</td><td><input type="text" name="price"></td>
+	<td>Minimum price:*</td><td><input type="text" name="price" class="necessary"></td>
 	</tr>
 	<tr>
 	<td>Extra cost per person:</td><td><input type="text" name="pricePerExtra;"></td>
 	</tr>
 	<tr>
-	<td>Room type:*</td><td><input type="text" name="roomType"></td>
+	<td>Room type:*</td><td><input type="text" name="roomType" class="necessary"></td>
 	</tr>
 	<tr>
 	<td>Rules:</td><td><input type="text" name="rules"></td>
 	</tr>
 	<tr>
-	<td>Description:*</td><td><input type="text" name="description"></td>
+	<td>Description:*</td><td><input type="text" name="description" class="necessary"></td>
 	</tr>
 	<tr>
-	<td>Number of beds:*</td><td><input type="text" name="beds"></td>
+	<td>Number of beds:*</td><td><input type="text" name="beds" class="necessary"></td>
 	</tr>
 	<tr>
-	<td>Number of bathrooms:*</td><td><input type="text" name="bathrooms"></td>
+	<td>Number of bathrooms:*</td><td><input type="text" name="bathrooms" class="necessary"></td>
 	</tr>
 	<tr>
-	<td>Number of bedrooms:*</td><td><input type="text" name="bedrooms"></td>
+	<td>Number of bedrooms:*</td><td><input type="text" name="bedrooms" class="necessary"></td>
 	</tr>
 	<tr>
 	<td>SquareMetres:</td><td><input type="text" name="SquareMetres"></td>
 	</tr>
 	<tr>
-	<td><input type="submit" value="Submit"></td>
+	<td><input type="submit" value="Submit" id="submit"/></td>
 	</tr>
 	</table>
 	</form>
+	<script src="js/addroom.js"></script>
 </body>
 </html>

@@ -67,7 +67,7 @@
 	<br>
 	<br>
 	<b>Amenities:</b>
-	<c:out value = "${room.amenities}"/>
+	<c:out value = "${amenities}"/>
 	
 	<br>
 	<br>

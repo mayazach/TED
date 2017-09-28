@@ -1,5 +1,7 @@
 package com.project.rooms.controllers;
 
+import java.util.logging.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
@@ -18,6 +20,8 @@ import com.project.rooms.entities.Room;
 
 @Controller
 public class RoomAddContoller {
+	Logger logger = Logger.getLogger(RoomController.class.getName());
+	
 	@Autowired
 	OwnerDAO ownerDAO;
 	@Autowired
@@ -55,8 +59,7 @@ public class RoomAddContoller {
 		 if(transport != null)
 			 room.setTransport(transport);
 		 roomDAO.save(room);
-		 
-	     return "../index.html";
+		 return "../index.html";
 	 }
 	 
 }
