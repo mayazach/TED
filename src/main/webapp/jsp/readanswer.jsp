@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ page import = "java.io.*,java.util.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -35,31 +34,56 @@ body{
        margin-right: 40%;
        }
 
+.hidden{
+	   display:none;
+	   }
 </style>
-
-
-<title>ContactOwner</title>
+<title>Read a message and write an answer</title>
 </head>
 <body>
-<!--Coming soon!!<br>
-Owner-Recipient:<c:out value = "${recipient.username}"/>
-<br>
-User-Sender:<c:out value = "${sender.username}"/>
--->
-<h1>Send messages to the rooms's owner</h1>
-<h2>Owner:<c:out value = "${recipient.username}"/></h2>
 <div class="card1">
-<h3>Previous messages:</h3>
+<h3>Previous message:</h3>
+<table>
+<tr>
+<td>From:</td><td><c:out value = "${sender}"/></td>
+</tr>
+<tr>
+<td>Subject:</td><td><c:out value = "${MessageRead.subject}"/></td>
+</tr>
+<tr>
+<td>Date:</td><td><c:out value = "${MessageRead.datesent}"/></td>
+</tr>
+
+</table>
+<br>
+<b>Message:</b><br>
+<c:out value = "${MessageRead.text}"/>
+<br>
+<br>
 </div>
 <br>
 <br>
 <div class="card2">
 <h3>New message:</h3>
 <form action="" name="messageForm" method="post">
-    <textarea id="confirmationText" class="text" cols="50" rows ="4" name="messageText"></textarea>
+     <table>
+     <tr>
+     <td><label class="hidden">To(recipitor's username):</label></td><td><input type="text"  name="recipientName" class="hidden" value=""></td>
+     </tr>
+     <tr><td>Subject:*</td><td><input type="text"  name="subject"></td>
+     </tr>
+     </table>
+    <br>  
+    Write your message here!!<br>
+    <textarea id="confirmationText" class="text" cols="50" rows ="4" name="text"></textarea>
 
    <input type="submit" value="Submit">
-</form>
-</div>
+   </form>
+   </div>
+</body>
+</html>
+
+
+
 </body>
 </html>
