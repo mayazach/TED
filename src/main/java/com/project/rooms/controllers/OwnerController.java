@@ -105,7 +105,12 @@ public class OwnerController {
 	       String userName=authentication.getName();
 	       User sender=userDAO.findUserByUsername(userName);
 	       User recipient=userDAO.findUserByUsername(recipientName);
+	       /*get current date*/
+	       Date dateSent = new Date();
+	      /* System.out.println(date.toString());*/
+	       Message message=new Message(sender,recipient,subject,text,dateSent);
 	       /*create a new message object and save it*/
+	       messageDAO.save(message);
 	       
 	      return "storemes.jsp";
       }

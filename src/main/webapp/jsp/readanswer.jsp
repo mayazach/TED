@@ -65,10 +65,10 @@ body{
 <br>
 <div class="card2">
 <h3>New message:</h3>
-<form action="" name="messageForm" method="post">
+<form action="${pageContext.request.contextPath}/storemes" name="messageForm" method="post">
      <table>
      <tr>
-     <td><label class="hidden">To(recipitor's username):</label></td><td><input type="text"  name="recipientName" class="hidden" value=""></td>
+     <td><label class="hidden">To(recipitor's username):</label></td><td><input type="text"  name="recipientName" class="hidden" value="${username}"></td>
      </tr>
      <tr><td>Subject:*</td><td><input type="text"  name="subject"></td>
      </tr>

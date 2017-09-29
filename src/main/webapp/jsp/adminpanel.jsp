@@ -23,7 +23,7 @@
 	    padding: 5px;
 	    text-align: left;
 	}
-	tr:hover{
+	.clickable:hover{
 	   background-color: lightblue;
 	}
 	</style>

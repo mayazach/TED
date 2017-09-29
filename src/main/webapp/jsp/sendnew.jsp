@@ -31,7 +31,7 @@ body{
 <body>
 <div class="card">
 <h3>New message:</h3>
-<form action="" name="messageForm" method="post">
+<form action="${pageContext.request.contextPath}/storemes" name="messageForm" method="post">
      <table>
      <tr>
      <td>To(recipitor's username):*</td><td><input type="text"  name="recipientName"></td>        </td>

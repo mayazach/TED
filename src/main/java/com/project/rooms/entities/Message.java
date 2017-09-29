@@ -37,9 +37,10 @@ public class Message {
 
 	protected Message() {}
 
-	public Message(Long id, User sender, User recipient, String subject, String text, Date dateSent) {
+	/*public Message(Long id, User sender, User recipient, String subject, String text, Date dateSent) {*/
+	public Message(User sender, User recipient, String subject, String text, Date dateSent) {	
 		super();
-		this.id = id;
+		/*this.id = id;*/
 		this.sender = sender;
 		this.recipient = recipient;
 		this.subject = subject;
