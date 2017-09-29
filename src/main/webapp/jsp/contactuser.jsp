@@ -32,11 +32,13 @@
 <h1>Your Messages</h1>
 <table style="width:30%">
 	  <tr style="color:brown">
+	    <th>From</th>
 	    <th>Subject</th>
 	    </tr>
 	    <!--<tr class="clickable" data-href="${pageContext.request.contextPath}/roomdetails/${dwm.id}">-->
 	    <c:forEach var = "mes" items = "${messages}">
 	     <tr class="clickable" data-href="${pageContext.request.contextPath}/readanswer/${mes.id}">
+	     <td><c:out value = "${mes.sender.username}"/></td>
 	     <td><c:out value = "${mes.subject}"/></td>
 	     </tr>
 	    </c:forEach>
