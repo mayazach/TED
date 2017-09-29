@@ -45,19 +45,19 @@ body{
 <h3>Previous message:</h3>
 <table>
 <tr>
-<td>From:</td><td><c:out value = "${sender}"/></td>
+<td>From:</td><td><c:out value = "${username}"/></td>
 </tr>
 <tr>
-<td>Subject:</td><td><c:out value = "${MessageRead.subject}"/></td>
+<td>Subject:</td><td><c:out value = "${message.subject}"/></td>
 </tr>
 <tr>
-<td>Date:</td><td><c:out value = "${MessageRead.datesent}"/></td>
+<td>Date:</td><td><c:out value = "${message.dateSent}"/></td>
 </tr>
 
 </table>
 <br>
 <b>Message:</b><br>
-<c:out value = "${MessageRead.text}"/>
+<c:out value = "${message.text}"/>
 <br>
 <br>
 </div>

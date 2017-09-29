@@ -1,3 +1,4 @@
+DROP TABLE message;
 DROP TABLE review;
 DROP TABLE photo;
 DROP TABLE rentdates;
@@ -361,5 +362,7 @@ INSERT INTO photo (id,roomid,source) VALUES (39,20,'https://a0.muscache.com/im/p
 INSERT INTO photo (id,roomid,source) VALUES (40,20,'https://a0.muscache.com/im/pictures/a4ed972c-103d-4b4f-853f-2ebdda92a179.jpg?aki_policy=x_large');
 
 INSERT INTO review (id,roomid,text,score) VALUES (1,1,'Great place!',95);
+
+INSERT INTO message (id, senderid,recipientid, subject,text,dateSent) VALUES (1,1,3,'Hi','I want to rent your room','2017-01-01');
 
 COMMIT;

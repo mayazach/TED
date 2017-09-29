@@ -57,6 +57,8 @@ public class OwnerController {
 		List<Message> messages=new ArrayList<>();
 		String recnam=authentication.getName();
 		User recipient=userDAO.findUserByUsername(recnam);
+		for(Message message : messageDAO.findMessagesByRecipient(recnam))
+			messages.add(message);
 		/*receive messages for the recipient*/
 		
 		logger.info("bike");
@@ -73,31 +75,39 @@ public class OwnerController {
       public String readanswer(Model model,Authentication authentication,@PathVariable("id") Long id )
       {
 	  /*receive message with id*/
+    	  Message message = messageDAO.findOne(id);
+    	  logger.info(authentication.getName());
+    	  logger.info(message.getRecipient().getUsername());
+    	  if(authentication.getName().equals(message.getRecipient().getUsername())){
       /*take the username of the message's sender*/
-      return "readanswer.jsp";  	  
+    	  String username = message.getSender().getUsername();
+    	  model.addAttribute("message",message);
+    	  model.addAttribute("username",username);
+    	  }
+    	  return "readanswer.jsp";  	  
       }
 
 
       /*3.send a new message*/
-      @RequestMapping(value="/sendnew",method=RequestMethod.GET)
-      public String sendnew(Model model,Authentication authentication)
-      {
- 
-      return "sendnew.jsp";
-      }
+//      @RequestMapping(value="/sendnew",method=RequestMethod.GET)
+//      public String sendnew(Model model,Authentication authentication)
+//      {
+// 
+//      return "sendnew.jsp";
+//      }
      
       /*4. Store message and inform that the message has been sent*/
       /*4.Redirect to /contactuser*/
-      @RequestMapping(value="/storemes",method=RequestMethod.GET)
+      @RequestMapping(value="/storemes",method=RequestMethod.POST)
       public String storemes(Model model,Authentication authentication,
       @RequestParam("recipientName") String recipientName,
       @RequestParam("subject") String subject,@RequestParam("text") String text){
-       String userName=authentication.getName();
-       User sender=userDAO.findUserByUsername(userName);
-       User recipient=userDAO.findUserByUsername(recipientName);
-       /*create a new message object and save it*/
-       
-      return "storemes.jsp";
+	       String userName=authentication.getName();
+	       User sender=userDAO.findUserByUsername(userName);
+	       User recipient=userDAO.findUserByUsername(recipientName);
+	       /*create a new message object and save it*/
+	       
+	      return "storemes.jsp";
       }
       
 }

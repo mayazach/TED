@@ -37,7 +37,7 @@ public class Message {
 
 	protected Message() {}
 
-	protected Message(Long id, User sender, User recipient, String subject, String text, Date dateSent) {
+	public Message(Long id, User sender, User recipient, String subject, String text, Date dateSent) {
 		super();
 		this.id = id;
 		this.sender = sender;

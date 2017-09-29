@@ -10,9 +10,9 @@ import com.project.rooms.entities.Message;
 
 public interface MessageDAO extends CrudRepository<Message, Long>{
 	
-	@Query("SELECT m FROM Message m WHERE m.recipient = :user")
+	@Query("SELECT m FROM Message m JOIN m.recipient u WHERE u.username = :user")
 	List<Message> findMessagesByRecipient(@Param("user") String user);
 	
-	@Query("SELECT m FROM Message m WHERE m.sender = :user")
+	@Query("SELECT m FROM Message m JOIN m.sender u WHERE u.username = :user")
 	List<Message> findMessagesBySender(@Param("user") String user);
 }

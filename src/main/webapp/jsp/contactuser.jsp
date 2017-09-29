@@ -36,7 +36,7 @@
 	    </tr>
 	    <!--<tr class="clickable" data-href="${pageContext.request.contextPath}/roomdetails/${dwm.id}">-->
 	    <c:forEach var = "mes" items = "${messages}">
-	     <tr class="clickable data-href=${pageContext.request.contextPath}/readanswer/${mes.id}">
+	     <tr class="clickable" data-href="${pageContext.request.contextPath}/readanswer/${mes.id}">
 	     <td><c:out value = "${mes.subject}"/></td>
 	     </tr>
 	    </c:forEach>
@@ -45,5 +45,19 @@
 	 <form class="sendnew" action="/rooms/sendnew">
 	    <input type="submit" value="SEND A NEW MESSAGE"/>
 	</form>
+	<script type="text/javascript">
+	var elements = document.getElementsByClassName('clickable');
+	/*location.href="index3.html";*/
+	for (var i = 0; i < elements.length; i++) {
+	    var element = elements[i];
+	    element.addEventListener('click', function() {
+	        var href = this.dataset.href;
+	        if (href) {
+	            window.location.assign(href);
+	    
+	        }
+	    })
+	}
+	</script>
 </body>
 </html>
