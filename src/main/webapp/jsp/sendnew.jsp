@@ -34,7 +34,7 @@ body{
 <form action="${pageContext.request.contextPath}/storemes" name="messageForm" method="post">
      <table>
      <tr>
-     <td>To(recipitor's username):*</td><td><input type="text"  name="recipientName"></td>        </td>
+     <td>To(recipitor's username):*</td><td><input type="text"  name="recipientName"></td> 
      </tr>
      <tr><td>Subject:*</td><td><input type="text"  name="subject"></td>
      </tr>
@@ -43,7 +43,7 @@ body{
     Write your message here!!<br>
     <textarea id="confirmationText" class="text" cols="50" rows ="4" name="text"></textarea>
 
-   <input type="submit" value="Submit">
+   <input type="submit" id="submit" value="Submit"/>
 </form>
 </div>
 </body>
