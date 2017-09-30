@@ -163,7 +163,7 @@ INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePe
 	VALUES (1,1,'A 2-bdrm house in Plaka of Athens','https://www.airbnb.com/rooms/5731498','Ideally located a unique house in a very peaceful neighborhood of Plaka',
 	4,6,120,15,null,null,null,'Apartment',3,2,1,'https://a2.muscache.com/ac/pictures/71819787/97d77d9e_original.jpg?interpolation=lanczos-none&size=small&output-format=jpg&output-quality=70',
 	'https://a2.muscache.com/ac/pictures/71819787/97d77d9e_original.jpg?interpolation=lanczos-none&size=medium&output-format=jpg&output-quality=70',
-	'1st',null,'Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
+	'1st','Plaka','Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
 	null,16,94);
 INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePerExtra,pricePerWeek,pricePerMonth,squareMetres,roomType,
 	beds,bedrooms,bathrooms,thumbnail,defaultPic,floor,neighborhoodOverview,address,postalCode,city,state,country,transport,amenities,
@@ -195,7 +195,7 @@ INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePe
 	VALUES (5,1,'ATHENS DESIGNER''S LOFT DOWNTOWN','https://www.airbnb.com/rooms/918812','Designer''s down town loft, constructed by an architect, more than once published in architectural magazines (like ''House & Garden'', ''Maison & Decoration'', etc.). Fully equipped with high tech devices - 2 flat screen 40'' and 60'' TV, home cinema Wi-Fi, fully air condition. Central Psyri Square view, sunset view, extremely luminous place. A down town loft in the most convenient area of Psyri which has archaeological as well as cosmopolitan and urban value.  "monastiraki" metro station with direct itinerary to/from the airport is in Walking distance (approx. 2 min.)  from the Acropolis and historic area of Thisseion and Plaka. Walking distance (approx. 12 min)  from Gazi area, famous for it''s alternative night-life and clubbing. Walking distance (approx. 15 min) from Kolonaki area, the best market and shopping centre. One big bedroom with a 2.00x2.00m bed And a very big sofa for 2-3 persons. Full equipped bathroom with 2 access from the living room and from the bedroom',
 	2,4,70,10,450,1300,null,'Apartment',1,1,1,'https://a2.muscache.com/ac/pictures/2261709/e6e849e7_original.jpg?interpolation=lanczos-none&size=small&output-format=jpg&output-quality=70',
 	'https://a2.muscache.com/ac/pictures/2261709/e6e849e7_original.jpg?interpolation=lanczos-none&size=medium&output-format=jpg&output-quality=70',
-	'1st',null,'Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
+	'1st','Psyri','Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
 	null,16,94);
 INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePerExtra,pricePerWeek,pricePerMonth,squareMetres,roomType,
 	beds,bedrooms,bathrooms,thumbnail,defaultPic,floor,neighborhoodOverview,address,postalCode,city,state,country,transport,amenities,
@@ -203,7 +203,7 @@ INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePe
 	VALUES (6,1,'Breath Away National Garden wifi','https://www.airbnb.com/rooms/240960','A breath away from  Zappeion and the National Royal Garden  just a few seconds away . There are supermarkets, stores, restaurants, caffes, banks and pharmacies within a 2min. walking . Fully Furnished Studio on the 1st  floor  ,28.00 square meters including:1 spacious area, full bath with shower and fully equipped small kitchen. Studio amenities include: Hot water, Flat LCD  TV, Hair dryer,Iron, Cooking facilities,  air-conditioning , Washing Machine, Coffee maker, Toaster, Kettler,Refrigerator, Micro Wave, Oven. kitchen accessories (plates, dishes, pots, ventilation, etc). It also includes: 1 double bed with all necessary accessories (linens, pillows, etc) High speed internet is provided free For the benefit of all guests: No pets and No Smoking',
 	1,1,40,0,260,550,null,'Apartment',1,1,1,'https://a0.muscache.com/ac/pictures/57865371/e2003c3f_original.jpg?interpolation=lanczos-none&size=small&output-format=jpg&output-quality=70',
 	'https://a0.muscache.com/ac/pictures/57865371/e2003c3f_original.jpg?interpolation=lanczos-none&size=medium&output-format=jpg&output-quality=70',
-	'1st',null,'Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
+	'1st','Plaka','Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
 	null,16,94);
 INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePerExtra,pricePerWeek,pricePerMonth,squareMetres,roomType,
 	beds,bedrooms,bathrooms,thumbnail,defaultPic,floor,neighborhoodOverview,address,postalCode,city,state,country,transport,amenities,
@@ -251,7 +251,7 @@ INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePe
 	VALUES (12,2,'Follow the Sun','https://www.airbnb.com/rooms/448963','A sunny place for holidays...',
 	2,2,10,0,null,null,null,'Apartment',1,1,1,'https://a0.muscache.com/ac/pictures/93635734/32d4d888_original.jpg?interpolation=lanczos-none&size=small&output-format=jpg&output-quality=70',
 	'https://a0.muscache.com/ac/pictures/93635734/32d4d888_original.jpg?interpolation=lanczos-none&size=medium&output-format=jpg&output-quality=70',
-	'1st',null,'Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
+	'1st','Attiki','Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
 	null,16,94);
 INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePerExtra,pricePerWeek,pricePerMonth,squareMetres,roomType,
 	beds,bedrooms,bathrooms,thumbnail,defaultPic,floor,neighborhoodOverview,address,postalCode,city,state,country,transport,amenities,
@@ -275,7 +275,7 @@ INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePe
 	VALUES (15,2,'Loft apartment in Gazi, Athens','https://www.airbnb.com/rooms/110066','Enjoy your stay in this newly-built, luxurious loft in the heart of Athens. Stylishly furnished and equipped with all modern amenities, this spacious loft apartment features two levels connected by a staircase and can accommodate up to 3 people, who can also enjoy the rooftop swimming pool and deck, featuring 360-degree views of Athens. Located at walking distance from Kerameikos metro station and Gazi district featuring a wide array of cafes, restaurants, clubs, theatres, as well as at a 15-minute walk from Thiseio and Monastiraki, it is an ideal choice for visitors wanting to experience Athens'' vibrant lifestyle as well as its cultural attractions. A private parking space is also provided for guests. The Gazi district is the new cool place to be in Athens, full of restaurants, cafes, music, and art by the old city gas-works which has been turned into a museum-cultural center, Technopolis, that may be unique in all of Europe. Around the metro at Kerameikos cluster countless eateries',
 	2,4,90,20,null,null,null,'Apartment',2,1,1,'https://a0.muscache.com/ac/pictures/91524491/bd9acb2d_original.jpg?interpolation=lanczos-none&size=small&output-format=jpg&output-quality=70',
 	'https://a0.muscache.com/ac/pictures/91524491/bd9acb2d_original.jpg?interpolation=lanczos-none&size=medium&output-format=jpg&output-quality=70',
-	'1st',null,'Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
+	'1st','Gazi','Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
 	null,16,94);
 INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePerExtra,pricePerWeek,pricePerMonth,squareMetres,roomType,
 	beds,bedrooms,bathrooms,thumbnail,defaultPic,floor,neighborhoodOverview,address,postalCode,city,state,country,transport,amenities,
@@ -307,7 +307,7 @@ INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePe
 	VALUES (19,2,'Center of Athens (Akropoli)','https://www.airbnb.com/rooms/1274275','A comfortable appartment very close to the center ( monastiraki, thisio , akropoli, kerameiko, plaka) , metro station kerameikos (blue line) and train station petralona (green line) Very close to the Center, two foltable bikes, washing machine, oven , fridge, king size bed, balcony, close to super market, kafe - bar LOLA. You can host a third person without charges We have to bikes which you are allowed to use!!! Close to all facilities, super market, nice cafe close. The house is in  pedestrian street 1.Metro station KERAMEIKOS(blue line ) 8 minutes , 650 metres 2. Train station PETRALONA ( green line ) 9 minutes 750 metres 3. Bike  4. Walk to center 20 minutes  1,6 km Also you can host one third person without extra charges  .You can use all ingredients in the kitchen and also my painting materials to make your own creations ',
 	1,1,50,0,300,null,null,'Apartment',1,1,1,'https://a0.muscache.com/ac/pictures/93037580/328fad70_original.jpg?interpolation=lanczos-none&size=small&output-format=jpg&output-quality=70',
 	'https://a0.muscache.com/ac/pictures/93037580/328fad70_original.jpg?interpolation=lanczos-none&size=medium&output-format=jpg&output-quality=70',
-	'1st',null,'Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
+	'1st','Kerameikos','Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
 	null,16,94);
 INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePerExtra,pricePerWeek,pricePerMonth,squareMetres,roomType,
 	beds,bedrooms,bathrooms,thumbnail,defaultPic,floor,neighborhoodOverview,address,postalCode,city,state,country,transport,amenities,
@@ -315,7 +315,7 @@ INSERT INTO room (id,ownerid,name,url,description,guests,maxguests,price,pricePe
 	VALUES (20,2,'Newly decorated bright apartment','https://www.airbnb.com/rooms/7291718','The apartment is on the 4th floor of a building in β€Zografouβ€, a safe and quiet area of Athens. It consists of two rooms and a living room with an open kitchen.',
 	1,1,60,0,350,1000,null,'Apartment',2,2,1,'https://a1.muscache.com/ac/pictures/55020630/5feb1774_original.jpg?interpolation=lanczos-none&size=small&output-format=jpg&output-quality=70',
 	'https://a1.muscache.com/ac/pictures/55020630/5feb1774_original.jpg?interpolation=lanczos-none&size=medium&output-format=jpg&output-quality=70',
-	'1st',null,'Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
+	'1st','Zografou','Vyronos, Athina, 105 58, Greece','105 58','Athens','Attica',2,null,'{TV,"Cable TV",Internet,"Wireless Internet","Air Conditioning",Kitchen,Heating,"Family/Kid Friendly",Washer,Essentials,Shampoo}',
 	null,16,94);
 	
 INSERT INTO rentdates (id,roomid,startdate,enddate) VALUES (1,1,'2017-01-01','2017-12-31');

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <title>Room Booking Application</title>
+  <head>
+  	<title>Advanced Search</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/form.css">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
@@ -20,9 +20,9 @@
              $( "#datepicker-2" ).datepicker({ dateFormat: "dd-mm-yy" });
           });
      </script>
-</head>
-<body>
-	<nav id="loginbar">
+  </head>
+  <body>
+  	<nav id="loginbar">
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="register">Register</a></li>
@@ -37,9 +37,7 @@
 		</ul>		
 	</nav>
 	
-    <h1 style=text-align:center>Welcome</h1>
-    
-    <form id='user-opt' class=form1 action='/rooms/search' method='get'>
+	<form id='user-opt' class=form1 action='/rooms/search' method='get'>
 	    <table align="center">
 	    <tr><td colspan=2>Location:</td></tr>
 	    <tr>
@@ -87,19 +85,21 @@
 				<option>16</option>
 			</select>
 	    </td></tr>
+	    <tr>
+	    	<td>Maximum price:</td> <td><input type="text" name="price" id="price"></td>
+	    </tr>
+	    <tr>
+	    <td>Room type:</td>
+	    <td>
+	    	<select id="roomType" name="roomType">
+				<option>Apartment</option>
+				<option>House</option>
+				<option>Loft</option>
+			</select>
+	    </td></tr>
 	    </table>
 	    <br>
 	    <input type="submit" value="Submit">
 	</form>
-	<p style=text-align:center>
-		<a href="/rooms/advsearch.html">Advanced Search</a>
-	</p>
-    <!-- <script>
-    setTimeout(function() {
-    window.location.href = "index2.html";
-    }, 3000);
-</script> -->
-</body>
-
-
+  </body>
 </html>
