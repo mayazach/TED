@@ -39,6 +39,10 @@
 	    hover:red;
 	    
 	}
+	.mess{
+	    margin-left:50%;
+	    width:20%
+	}
 	
 	h1{
 	  color:green;
@@ -114,6 +118,9 @@
 	<br>
 	<button class="passf" type="submit" id="passf">Change password</button>
 	</div>
+	<br>
+	<br>
+	<button class="mess" type="submit" id="mes">Messaging</button>
 	
 	 <script type="text/javascript">
 	             document.getElementById("editf").onclick=function(){
@@ -125,5 +132,11 @@
 	            	 location.href='/rooms/changepassword';
 	             };
 	             </script>
+	 <script type="text/javascript">
+	             document.getElementById("mes").onclick=function(){
+	            	 window.location.href='/rooms/contactuser';
+	             };
+	             </script>
+	             
 </body>
 </html>
