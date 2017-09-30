@@ -19,9 +19,12 @@ public interface RoomDAO extends CrudRepository<Room,Long>{
 	List<Room> findRoomByOwner(@Param("owner") Owner owner);
 	
 	@Query("SELECT r FROM Room r JOIN r.country c WHERE (r.neighborhood = :neighborhood OR :neighborhood = '') "
-			+ "AND (r.city = :city OR :city = '') AND r.maxGuests >= :guests AND r.price <= :price ORDER BY r.price")
+			+ "AND (r.city = :city OR :city = '') AND r.maxGuests >= :guests AND r.price <= :price "
+			+ "AND (r.roomType =:roomType OR :roomType = 'Any' ) AND (r.amenities LIKE CONCAT('%',:wifi,'%')) "
+			+ "ORDER BY r.price")
 	List<Room> searchRooms(@Param("neighborhood") String neighborhood,@Param("city") String city,
-			@Param("guests") int guests,@Param("price") double price);
+			@Param("guests") int guests,@Param("price") double price,@Param("roomType") String roomType,
+			@Param("wifi") String wifi);
 	
 	
 	
