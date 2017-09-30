@@ -75,7 +75,6 @@
 	<c:out value = "${room.rules}"/>
 	<br>
 	
-	<br>
 	<!--  Price:-->
 	
 	<br>
@@ -89,11 +88,21 @@
 	<br>
 	Transportation:<c:out value = "${room.transport}"/>
 	<br>
+	<br>
 	<b>Photos:</b>
 	<br>
 	<c:forEach var = "photo" items = "${photos}" >
 	<img src =<c:out value = "${photo.source}"/> width="200" height="200"> 
-	 </c:forEach>
+	</c:forEach>
+	<br>
+	<br>
+	<b>Owner info:</b>
+	<br>
+	Name:<c:out value = "${roomowner.firstName}"/> <c:out value = "${roomowner.lastName}"/>
+	<br>
+	UserName:<c:out value = "${roomowner.username}"/>
+	<br>
+	<i>*Subscribe to be able to send your questions to the owner.</i>
 	</div>
 </body>
 </html>
