@@ -22,6 +22,9 @@
 	margin-left:10%;
 	margin-right:10%;
 	}
+	.hidden{
+	   display:none;
+	}
 	
 	</style>
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
@@ -29,7 +32,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/navbar.js"></script>
 </head>
-<body>
+<body onload="showHide()">
 	<nav id="loginbar">
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -44,6 +47,19 @@
 			<li><a href="logout">Logout</a></li>
 		</ul>		
 	</nav>
+	<script>
+	      function showHide(){      
+		  var owner_profile="${is_owner}";
+		  var hiddeninputs=document.getElementsByClassName("hidden");
+		  for(var i=0;i!=hiddeninputs.length;i++)
+			  {
+			   if(owner_profile==1)
+				   {
+				   hiddeninputs[i].style.display="block";
+				   }
+			  }
+		  }
+	</script>
 	<h1 style=margin-left:10%;margin-right:10%>User info</h1>
 	<br>
 	<b>UserName:</b><c:out value = "${user.username}"/>
@@ -62,6 +78,16 @@
 	<br>
 	<b>Role:</b><c:out value = "${user.role}"/>
 	<br>
+	<label class="hidden"><b>Url:</b><c:out value = "${owner.url}"/>
+	<br>
+	</label>
+	<label class="hidden"><b>Description:</b><c:out value = "${owner.description}"/>
+	<br>
+	</label>
+	<label class="hidden"><b>Location:</b><c:out value = "${owner.location}"/>
+	<br>
+	</label>
+	
 
 </body>
 </html>
