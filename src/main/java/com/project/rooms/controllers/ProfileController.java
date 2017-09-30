@@ -29,7 +29,6 @@ public class ProfileController {
 	int is_owner=0;
 	String role;
 	String username = authentication.getName();
-    logger.info(username);
     User user=userDAO.findUserByUsername(username);
     role=user.getRole();
     if(role.equals("owner"))
@@ -89,7 +88,6 @@ public class ProfileController {
     	setEmail(String email)
     	setPhone(String phone)
     	*/
-    	logger.info("changes");
     	user.setFirstName(firstName);
     	user.setLastName(lastName);
     	user.setEmail(email);
@@ -129,8 +127,6 @@ public class ProfileController {
     String username=authentication.getName();
     User user=userDAO.findUserByUsername(username);
     String password=user.getPassword();
-    logger.info("password");
-    logger.info(password);
     model.addAttribute("user",user);
     model.addAttribute("password",password);
 

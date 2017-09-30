@@ -61,8 +61,6 @@ public class OwnerController {
 			messages.add(message);
 		/*receive messages for the recipient*/
 		
-		logger.info("bike");
-		logger.info(recnam);
 		
 	   	model.addAttribute("messages",messages);
 	   	   
@@ -76,8 +74,6 @@ public class OwnerController {
       {
 	  /*receive message with id*/
     	  Message message = messageDAO.findOne(id);
-    	  logger.info(authentication.getName());
-    	  logger.info(message.getRecipient().getUsername());
     	  if(authentication.getName().equals(message.getRecipient().getUsername())){
       /*take the username of the message's sender*/
     	  String username = message.getSender().getUsername();
