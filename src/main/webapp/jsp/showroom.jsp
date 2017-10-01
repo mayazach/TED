@@ -39,7 +39,7 @@
 	</nav>
 	<nav id="logoutbar" style=display:none>
 		<ul>
-			<li><a href="index.html">Home</a></li>
+			<li><a href="${pageContext.request.contextPath}/index.html">Home</a></li>
 			<li><a href="profile">Profile</a></li>
 			<li><a href="logout">Logout</a></li>
 		</ul>		

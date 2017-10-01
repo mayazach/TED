@@ -5,6 +5,9 @@ import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -106,6 +109,12 @@ public class Room {
 	
 	@Column(name="reviewAvg")
 	private Double reviewAvg;
+	
+	@Column(name="dateFrom")
+	private Date dateFrom;
+	
+	@Column(name="dateTo")
+	private Date dateTo;
 	
 	protected Room(){}
 	
@@ -392,6 +401,28 @@ public class Room {
 		this.reviewAvg = reviewAvg;
 	}
 
+	
+	
+	public Date getDateFrom() {
+		return dateFrom;
+	}
+
+	public void setDateFrom(Date dateFrom) {
+		this.dateFrom = dateFrom;
+	}
+
+	public Date getDateTo() {
+		return dateTo;
+	}
+
+	public void setDateTo(Date dateTo) {
+		this.dateTo = dateTo;
+	}
+
+	public void setSquareMetres(Integer squareMetres) {
+		this.squareMetres = squareMetres;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -403,6 +434,8 @@ public class Room {
 		result = prime * result + ((beds == null) ? 0 : beds.hashCode());
 		result = prime * result + ((city == null) ? 0 : city.hashCode());
 		result = prime * result + ((country == null) ? 0 : country.hashCode());
+		result = prime * result + ((dateFrom == null) ? 0 : dateFrom.hashCode());
+		result = prime * result + ((dateTo == null) ? 0 : dateTo.hashCode());
 		result = prime * result + ((defaultPic == null) ? 0 : defaultPic.hashCode());
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((floor == null) ? 0 : floor.hashCode());
@@ -472,6 +505,16 @@ public class Room {
 			if (other.country != null)
 				return false;
 		} else if (!country.equals(other.country))
+			return false;
+		if (dateFrom == null) {
+			if (other.dateFrom != null)
+				return false;
+		} else if (!dateFrom.equals(other.dateFrom))
+			return false;
+		if (dateTo == null) {
+			if (other.dateTo != null)
+				return false;
+		} else if (!dateTo.equals(other.dateTo))
 			return false;
 		if (defaultPic == null) {
 			if (other.defaultPic != null)
@@ -598,8 +641,10 @@ public class Room {
 				+ defaultPic + ", floor=" + floor + ", neighborhood=" + neighborhood + ", address=" + address
 				+ ", postalCode=" + postalCode + ", city=" + city + ", state=" + state + ", country=" + country
 				+ ", transport=" + transport + ", amenities=" + amenities + ", rules=" + rules + ", reviews=" + reviews
-				+ ", reviewAvg=" + reviewAvg + "]";
+				+ ", reviewAvg=" + reviewAvg + ", dateFrom=" + dateFrom + ", dateTo=" + dateTo + "]";
 	}
+
+	
 	
 	
 	
