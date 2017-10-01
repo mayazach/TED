@@ -45,6 +45,7 @@
 		</ul>		
 	</nav>
 	<h1 style=margin-left:10%;margin-right:10%>Room info</h1><br>
+	<h2 style=margin-left:10%;margin-right:10%><c:out value = "${room.name}"/></h2><br>
 	<div><b>Place:</b><br>
 	<%/*
 	            String beds = request.getParameter("bedsPar");

@@ -84,7 +84,8 @@ public class RoomAddContoller {
 		 if(squareMetres != null)
 			 room.setSquareMeters(squareMetres);
 		 roomDAO.save(room);
-		 return "../index.html";
+		 /*return "../index.html";*/
+		 return "newroom.jsp";
 		 }catch(ParseException p){
 			 p.printStackTrace();
 		 }
