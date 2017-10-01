@@ -39,7 +39,8 @@ public class RoomAddContoller {
 			 @RequestParam("price") Double price,@RequestParam(value="pricePerExtra",required=false) Double pricePerExtra,
 			 @RequestParam("roomType") String roomType,@RequestParam(value="rules",required=false) String rules,
 			 @RequestParam("description") String description,@RequestParam("bathrooms") Integer bathrooms ,@RequestParam("bedrooms") Integer bedrooms, 
-			 @RequestParam("beds") Integer numberOfBeds,@RequestParam(value="transport",required=false) String transport){
+			 @RequestParam("beds") Integer numberOfBeds,@RequestParam(value="transport",required=false) String transport,
+			 @RequestParam(value="squareMetres",required=false) Integer squareMetres){
 		 String username = authentication.getName();
 		 Owner owner = ownerDAO.getOwnerByUsername(username);
 		 Room room = new Room(owner,name,"https://www.google.gr",guests);
@@ -58,6 +59,8 @@ public class RoomAddContoller {
 		 room.setBeds(numberOfBeds);
 		 if(transport != null)
 			 room.setTransport(transport);
+		 if(squareMetres != null)
+			 room.setSquareMeters(squareMetres);
 		 roomDAO.save(room);
 		 return "../index.html";
 	 }
