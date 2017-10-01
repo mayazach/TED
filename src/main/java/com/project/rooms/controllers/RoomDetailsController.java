@@ -26,9 +26,12 @@ public class RoomDetailsController {
 	@RequestMapping(value="/updateroom/{id}",method = RequestMethod.POST)
 	public String updateRoom(Model model,@PathVariable("id") Long id,@RequestParam("name") String name,@RequestParam("address") String address,
 			@RequestParam("guests") Integer guests,@RequestParam("price") Double price,@RequestParam("roomType") String type,
-			@RequestParam("description") String description,@RequestParam("beds") Integer beds,@RequestParam("bedrooms") Integer bedrooms,
-			@RequestParam("bathrooms") Integer bathrooms){
+			@RequestParam("description") String description,@RequestParam("roomType") String roomType,@RequestParam("beds") Integer beds,@RequestParam("bedrooms") Integer bedrooms,
+			@RequestParam("bathrooms") Integer bathrooms,@RequestParam(value="transport",required=false) String transport,
+			@RequestParam(value="maxGuests",required=false) Integer maxGuests,@RequestParam(value="pricePerExtra",required=false) Double pricePerExtra,
+			@RequestParam(value="rules",required=false) String rules,@RequestParam(value="squareMetres",required=false) Integer squareMetres){
     Room room = roomDAO.findOne(id);
+    /*necessary fields*/
     room.setName(name);
     room.setAddress(address);
     room.setGuests(guests);
@@ -38,6 +41,17 @@ public class RoomDetailsController {
     room.setBeds(beds);
     room.setBedrooms(bedrooms);
     room.setBathrooms(bathrooms);
+    /*no necessary fields*/
+    if(maxGuests != null)
+		 room.setMaxGuests(maxGuests);
+	if(pricePerExtra != null)
+		 room.setPricePerExtra(pricePerExtra);
+	if(rules != null)
+		 room.setRules(rules);
+	 if(transport != null)
+		 room.setTransport(transport);
+	 if(squareMetres != null)
+		 room.setSquareMeters(squareMetres);
     roomDAO.save(room);
 	return "updateroom.jsp";
 	}

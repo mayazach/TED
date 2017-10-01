@@ -24,7 +24,7 @@
 			<li><a href="logout">Logout</a></li>
 		</ul>		
 	</nav>
-	<h2>Room added successfully</h2>
+	<h2>Room's details changed successfully</h2>
 	 <script>
 	        var timer = setTimeout(function() {
 	           /* window.location='index.html'*/
