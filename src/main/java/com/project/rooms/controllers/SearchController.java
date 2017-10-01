@@ -76,9 +76,6 @@ public class SearchController {
 		else
 			to = df.parse(dateTo);
 		List<Room> rooms = new ArrayList<>();
-		logger.info(ac);
-		logger.info(heating);
-		logger.info(kitchen);
 		for(Room room: roomDAO.searchRooms(neighborhood, city, people,maxPrice,type,wifi,from,to,ac,heating,kitchen,tv,parking,elevator,country))
 			rooms.add(room);
 		model.addAttribute("rooms",rooms);
